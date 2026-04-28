@@ -1,0 +1,43 @@
+{
+  "name": "ai-act-compliance",
+  "version": "1.0.0",
+  "description": "Authoritative Claude Code skill for EU AI Act (Regulation 2024/1689) compliance, strictly aligned with ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (AI cybersecurity).",
+  "skill": {
+    "name": "ai-act-compliance",
+    "type": "claude-skill",
+    "entry": "SKILL.md",
+    "references": "references/"
+  },
+  "keywords": [
+    "ai-act",
+    "eu-ai-act",
+    "regulation-2024-1689",
+    "iso-42001",
+    "iso-27090",
+    "iso-23894",
+    "iso-42005",
+    "aims",
+    "ai-management-system",
+    "ai-cybersecurity",
+    "compliance",
+    "grc",
+    "high-risk-ai",
+    "fria",
+    "conformity-assessment",
+    "annex-iv",
+    "post-market-monitoring",
+    "art-50-transparency",
+    "gpai",
+    "general-purpose-ai",
+    "claude-skill"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abk1969/ai-act-skills.git"
+  },
+  "homepage": "https://github.com/abk1969/ai-act-skills#readme",
+  "bugs": {
+    "url": "https://github.com/abk1969/ai-act-skills/issues"
+  }
+}
