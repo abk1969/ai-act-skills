@@ -152,11 +152,37 @@ User question category                              → Reference file
 
 "art. 56 GPAI Code of Practice, art. 95 voluntary    → references/14-codes-and-right-to-explanation.md
  codes of conduct, art. 86 right to explanation"
+
+"How does this skill run on Gemini CLI / OpenAI       → references/15-platform-compatibility.md
+ Codex? Install paths, activation, tool mapping"
 ```
 
 When the user's question spans multiple references (it usually will), read them in the order that matches the user's compliance lifecycle stage:
 
-1. Classification → 2. Obligations → 5. Crosswalk → 3. AIMS → 4. Security → 6. TechDoc → 7. FRIA → 8. Transparency → 9. Post-market → 10. GPAI/timeline → 11. AI literacy → 12. Substantial modification → 13. Sandboxes/real-world testing → 14. Codes & right to explanation.
+1. Classification → 2. Obligations → 5. Crosswalk → 3. AIMS → 4. Security → 6. TechDoc → 7. FRIA → 8. Transparency → 9. Post-market → 10. GPAI/timeline → 11. AI literacy → 12. Substantial modification → 13. Sandboxes/real-world testing → 14. Codes & right to explanation → 15. Platform compatibility (when the user asks about runtime / install).
+
+## Platform compatibility
+
+This skill is **runtime-agnostic** by design. The regulatory content
+(SKILL.md + 15 references + ssl.json) is identical across hosts —
+only discovery and activation differ.
+
+| Runtime | Status | Discovery file | Install path |
+|---|---|---|---|
+| **Claude Code** | ✅ first-class | `SKILL.md` frontmatter | `~/.claude/skills/ai-act-compliance/` |
+| **Gemini CLI** | ✅ supported | `GEMINI.md` (root + skill) | `~/.gemini/skills/ai-act-compliance/` |
+| **OpenAI Codex** | ✅ supported | `AGENTS.md` (root + skill) | `~/.agents/skills/ai-act-compliance/` |
+| Copilot CLI / Cursor | 🟡 community | `AGENTS.md` | varies |
+
+Why portability is trivial here: `ssl.json` declares
+`control_flow_features.tool_calls: false` and
+`touches_sensitive_resources: false`. The skill instructs the host model
+to **read its own reference files** and **emit citation-grade text** —
+both universal across LLM runtimes. No tool-name translation table is
+needed.
+
+Full per-platform install steps, activation contract, and smoke-test
+procedure: see `references/15-platform-compatibility.md`.
 
 ## Workflow — SSL scene structure
 

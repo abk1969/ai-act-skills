@@ -1,10 +1,13 @@
 # ai-act-compliance
 
-> Authoritative Claude Code skill for **EU AI Act (Regulation 2024/1689)** compliance — strictly aligned with **ISO/IEC 42001:2023** (AIMS) and **ISO/IEC 27090:2025** (AI cybersecurity).
+> Authoritative **multi-platform** agent skill for **EU AI Act (Regulation 2024/1689)** compliance — strictly aligned with **ISO/IEC 42001:2023** (AIMS) and **ISO/IEC 27090:2025** (AI cybersecurity). Runs natively on **Claude Code**, **Gemini CLI**, and **OpenAI Codex**.
 
 [![EU AI Act](https://img.shields.io/badge/EU_AI_Act-2024%2F1689-1f4e79)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 [![ISO 42001](https://img.shields.io/badge/ISO%2FIEC-42001%3A2023-0066b3)](https://www.iso.org/standard/81230.html)
 [![ISO 27090](https://img.shields.io/badge/ISO%2FIEC-27090%3A2025-0066b3)](https://www.iso.org/standard/56581.html)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-supported-7c3aed)](https://claude.com/claude-code)
+[![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-supported-1a73e8)](https://github.com/google-gemini/gemini-cli)
+[![Codex](https://img.shields.io/badge/OpenAI_Codex-supported-10a37f)](https://openai.com/codex)
 
 ## What this skill does
 
@@ -65,8 +68,15 @@ ai-act-compliance/
     ├── 11-art4-ai-literacy.md            # AI literacy programme (art. 4 — in force since 2025-02-02)
     ├── 12-art25-substantial-modification.md  # Provider-flip detection + foundation-model fine-tuning
     ├── 13-sandboxes-and-real-world-testing.md  # Art. 57–63 (regulatory sandboxes + art. 60 testing)
-    └── 14-codes-and-right-to-explanation.md   # Art. 56 GPAI Code of Practice + art. 95 voluntary + art. 86
+    ├── 14-codes-and-right-to-explanation.md   # Art. 56 GPAI Code of Practice + art. 95 voluntary + art. 86
+    └── 15-platform-compatibility.md           # Multi-platform install + activation (CC / Gemini / Codex)
 ```
+
+In addition to `SKILL.md`, the skill ships two host-specific discovery
+files for non-Claude-Code runtimes:
+
+- `AGENTS.md` — read by OpenAI Codex and other AGENTS-aware harnesses
+- `GEMINI.md` — read by Gemini CLI to surface the skill at session start
 
 The entry point (`SKILL.md`) routes to the right reference based on the user's intent. Each reference is self-contained and includes a practical output template.
 
@@ -82,28 +92,19 @@ The manifest is **derived from and grounded in** SKILL.md and references (per pa
 
 ## Installation
 
-### Via the skills.sh CLI (recommended)
+### Claude Code
 
 ```bash
+# Via the skills.sh CLI (recommended)
 npx skills add abk1969/ai-act-skills@ai-act-compliance -g -y
-```
 
-(Replace `abk1969` with the published owner once on skills.sh.)
-
-### Manual install
-
-Clone and copy into your Claude skills directory:
-
-**macOS / Linux**:
-```bash
+# Manual (macOS / Linux)
 git clone https://github.com/abk1969/ai-act-skills
 cp -R ai-act-skills/skills/ai-act-compliance ~/.claude/skills/
-```
 
-**Windows**:
-```powershell
+# Manual (Windows PowerShell)
 git clone https://github.com/abk1969/ai-act-skills
-xcopy ai-act-skills\skills\ai-act-compliance %USERPROFILE%\.claude\skills\ai-act-compliance /E /I
+xcopy ai-act-skills\skills\ai-act-compliance $env:USERPROFILE\.claude\skills\ai-act-compliance /E /I
 ```
 
 Then reload Claude Code's skill index:
@@ -112,7 +113,50 @@ Then reload Claude Code's skill index:
 /reload-plugins
 ```
 
-The skill name `ai-act-compliance` will appear in the available skills list and auto-trigger on relevant questions.
+### Gemini CLI
+
+```bash
+# macOS / Linux
+git clone https://github.com/abk1969/ai-act-skills
+mkdir -p ~/.gemini/skills/
+cp -R ai-act-skills/skills/ai-act-compliance ~/.gemini/skills/
+```
+
+```powershell
+# Windows
+git clone https://github.com/abk1969/ai-act-skills
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.gemini\skills" | Out-Null
+xcopy ai-act-skills\skills\ai-act-compliance $env:USERPROFILE\.gemini\skills\ai-act-compliance /E /I
+```
+
+Gemini reads `GEMINI.md` at session start and activates the skill via
+`activate_skill` when the user's question matches one of the 14 intent
+signatures listed in `ssl.json`.
+
+### OpenAI Codex
+
+```bash
+# macOS / Linux
+git clone https://github.com/abk1969/ai-act-skills
+mkdir -p ~/.agents/skills/
+cp -R ai-act-skills/skills/ai-act-compliance ~/.agents/skills/
+```
+
+```powershell
+# Windows
+git clone https://github.com/abk1969/ai-act-skills
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills" | Out-Null
+xcopy ai-act-skills\skills\ai-act-compliance $env:USERPROFILE\.agents\skills\ai-act-compliance /E /I
+```
+
+Codex follows the `AGENTS.md` convention — the top-level `AGENTS.md`
+in this repo declares the skill, and Codex picks it up at session
+start.
+
+The skill name `ai-act-compliance` will appear in the available skills
+list and auto-trigger on relevant questions on **all three** platforms.
+Full activation matrix and smoke-test procedure:
+[`references/15-platform-compatibility.md`](./references/15-platform-compatibility.md).
 
 ## Why ISO 42001 + 27090 (and not ISO 27001)?
 
@@ -174,10 +218,11 @@ The author is not responsible for compliance decisions made on the basis of this
 
 ## Versioning
 
-This skill version: **1.1.0**
+This skill version: **1.2.0**
 
 Changelog:
 
+- **1.2.0** — Multi-platform compatibility: native support for Claude Code, Gemini CLI, and OpenAI Codex via host-specific discovery files (`AGENTS.md`, `GEMINI.md`) at root + skill level. New `references/15-platform-compatibility.md` documents the activation matrix. `package.json` declares `platforms` and per-platform install paths. Skill content (regulatory expertise, ISO anchors) unchanged — only discovery and packaging extended.
 - **1.1.0** — SSL representation added (`ssl.json`); SKILL.md restructured into 7 typed SSL scenes; description tightened per writing-skills CSO rules; 4 new reference files added (art. 4 AI literacy, art. 25 substantial modification, art. 57–63 sandboxes & real-world testing, art. 56/95/86 codes & right to explanation).
 - **1.0.0** — Initial release.
 

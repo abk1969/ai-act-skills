@@ -5,6 +5,92 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] — 2026-05-08
+
+### Added — Multi-platform compatibility (Claude Code, Gemini CLI, OpenAI Codex)
+
+- **Root discovery files**:
+  - `AGENTS.md` — Codex / OpenAI / AGENTS-aware harness pointer
+    declaring `ai-act-compliance` with skill metadata, recommended
+    install path (`~/.agents/skills/`), activation contract, and
+    tool-name mapping policy (none required — skill issues no tool
+    calls).
+  - `GEMINI.md` — Gemini CLI session-start activation pointer with
+    `activate_skill` contract, intent signatures, and per-platform
+    install steps.
+- **Skill-level mirrors** at `skills/ai-act-compliance/`:
+  - `AGENTS.md` (skill-level) — pointer for runtimes that load skills
+    from a per-skill directory rather than a project root.
+  - `GEMINI.md` (skill-level) — same, for Gemini CLI deployments where
+    skills live under `~/.gemini/skills/`.
+- `skills/ai-act-compliance/references/15-platform-compatibility.md` —
+  canonical reference: support matrix (Claude Code / Gemini CLI /
+  Codex first-class; Copilot CLI / Cursor community), per-platform
+  install steps (macOS / Linux / Windows), activation triggers shared
+  across all hosts, runtime-agnostic output template, smoke-test
+  procedure, open issues. **15th reference file** in the skill.
+
+### Changed — `package.json`
+
+- Bumped to `1.2.0`.
+- `skill.type`: `claude-skill` → `agent-skill` (multi-platform).
+- New `skill.platforms` field: `["claude-code", "gemini-cli", "codex"]`.
+- New `skill.platform_files` map: which file each runtime reads first.
+- New `skill.install_paths` map: per-platform default install location.
+- New explicit declarations: `tool_calls: false`,
+  `touches_sensitive_resources: false`, `permission: filesystem.read`.
+- New keywords: `claude-code`, `gemini-cli`, `openai-codex`,
+  `multi-platform`, `agent-skill`.
+
+### Changed — `SKILL.md`
+
+- Decision tree extended with the 15th routing target
+  (`references/15-platform-compatibility.md`) for runtime / install
+  questions.
+- New top-level **"Platform compatibility"** section with the support
+  matrix and the rationale for trivial portability (no tool calls,
+  no sensitive resources).
+- Frontmatter unchanged — no breaking change for existing Claude Code
+  installs.
+
+### Changed — Skill `README.md`
+
+- Header updated: "multi-platform agent skill" + 3 platform badges
+  (Claude Code, Gemini CLI, Codex).
+- Installation section split into Claude Code / Gemini CLI / Codex
+  sub-sections with macOS/Linux + Windows commands.
+- File tree updated to include `15-platform-compatibility.md`,
+  `AGENTS.md`, `GEMINI.md`.
+- Changelog updated with v1.2.0 entry.
+
+### Changed — Root `README.md`
+
+- Header updated: "Multi-platform agent skills" + 3 platform badges.
+- Install section restructured into Claude Code / Gemini CLI / Codex
+  sub-sections + compatibility matrix table.
+- File tree updated with new top-level discovery files (`AGENTS.md`,
+  `GEMINI.md`) and skill-level additions.
+- Versioning section updated to 1.2.0.
+
+### Rationale
+
+The skill is **decision-support / reference-grade** with
+`control_flow_features.tool_calls: false` in `ssl.json` — no
+host-specific tools are invoked. Portability across runtimes is
+therefore essentially a discovery and packaging change: each runtime
+gets a small pointer file (`SKILL.md` for Claude Code, `GEMINI.md` for
+Gemini CLI, `AGENTS.md` for Codex / AGENTS-aware harnesses) that
+identifies the entry, while the regulatory content (citation-grade
+articles + clauses + Annex A controls) is identical across all hosts.
+
+**No regulatory content changed in this release.** Provider, deployer,
+GPAI, FRIA, AI literacy, and incident-reporting guidance is
+byte-identical to v1.1.0.
+
+### Stats
+
+7 files added, 4 files updated.
+
 ## [1.1.0] — 2026-05-07
 
 ### Added — SSL machine-readable manifest
@@ -107,5 +193,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `10-gpai-and-timeline.md` — GPAI arts. 51–55 + sanctions art. 99
     + timeline art. 113.
 
+[1.2.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.2.0
 [1.1.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.1.0
 [1.0.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.0.0

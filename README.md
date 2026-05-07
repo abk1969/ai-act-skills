@@ -1,12 +1,15 @@
 # ai-act-skills
 
-> Claude Code skills for **EU AI Act (Regulation 2024/1689)** compliance, anchored exclusively on **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090:2025** (AI cybersecurity).
+> **Multi-platform** agent skills for **EU AI Act (Regulation 2024/1689)** compliance, anchored exclusively on **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090:2025** (AI cybersecurity). Runs natively on **Claude Code**, **Gemini CLI**, and **OpenAI Codex**.
 
 [![Latest release](https://img.shields.io/github/v/release/abk1969/ai-act-skills?display_name=tag&sort=semver&color=2ea043)](https://github.com/abk1969/ai-act-skills/releases/latest)
 [![EU AI Act](https://img.shields.io/badge/EU_AI_Act-2024%2F1689-1f4e79)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 [![ISO 42001](https://img.shields.io/badge/ISO%2FIEC-42001%3A2023-0066b3)](https://www.iso.org/standard/81230.html)
 [![ISO 27090](https://img.shields.io/badge/ISO%2FIEC-27090%3A2025-0066b3)](https://www.iso.org/standard/56581.html)
 [![SSL representation](https://img.shields.io/badge/SSL-arXiv%3A2604.24026-b31b1b)](https://arxiv.org/abs/2604.24026)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-supported-7c3aed)](https://claude.com/claude-code)
+[![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-supported-1a73e8)](https://github.com/google-gemini/gemini-cli)
+[![Codex](https://img.shields.io/badge/OpenAI_Codex-supported-10a37f)](https://openai.com/codex)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Skills in this repository
@@ -17,23 +20,58 @@
 
 ## Install
 
-### Via the [skills.sh](https://skills.sh) CLI
+The skill content is **identical across runtimes** — only discovery
+and install paths differ. Pick your host:
+
+### Claude Code
 
 ```bash
+# Via the skills.sh CLI (recommended)
 npx skills add abk1969/ai-act-skills@ai-act-compliance -g -y
+
+# Manual
+git clone https://github.com/abk1969/ai-act-skills
+cp -R ai-act-skills/skills/ai-act-compliance ~/.claude/skills/      # macOS / Linux
+xcopy ai-act-skills\skills\ai-act-compliance $env:USERPROFILE\.claude\skills\ai-act-compliance /E /I  # Windows
 ```
 
-### Manual install
+Then `/reload-plugins` in Claude Code.
+
+### Gemini CLI
 
 ```bash
 git clone https://github.com/abk1969/ai-act-skills
-# macOS / Linux
-cp -R ai-act-skills/skills/ai-act-compliance ~/.claude/skills/
-# Windows (PowerShell)
-xcopy ai-act-skills\skills\ai-act-compliance $env:USERPROFILE\.claude\skills\ai-act-compliance /E /I
+mkdir -p ~/.gemini/skills/
+cp -R ai-act-skills/skills/ai-act-compliance ~/.gemini/skills/
 ```
 
-Then `/reload-plugins` in Claude Code. The skill auto-triggers on EU AI Act / ISO 42001 / ISO 27090 questions.
+Gemini reads `GEMINI.md` at session start and activates the skill via
+`activate_skill`.
+
+### OpenAI Codex
+
+```bash
+git clone https://github.com/abk1969/ai-act-skills
+mkdir -p ~/.agents/skills/
+cp -R ai-act-skills/skills/ai-act-compliance ~/.agents/skills/
+```
+
+Codex reads `AGENTS.md` at the project root.
+
+### Compatibility matrix
+
+| Runtime | Status | Discovery | Install path |
+|---|---|---|---|
+| **Claude Code** | ✅ first-class | `SKILL.md` frontmatter | `~/.claude/skills/ai-act-compliance/` |
+| **Gemini CLI** | ✅ supported | `GEMINI.md` (root + skill) | `~/.gemini/skills/ai-act-compliance/` |
+| **OpenAI Codex** | ✅ supported | `AGENTS.md` (root + skill) | `~/.agents/skills/ai-act-compliance/` |
+| Copilot CLI / Cursor | 🟡 community | `AGENTS.md` | varies |
+
+Full activation contract + smoke test:
+[`skills/ai-act-compliance/references/15-platform-compatibility.md`](./skills/ai-act-compliance/references/15-platform-compatibility.md).
+
+The skill auto-triggers on EU AI Act / ISO 42001 / ISO 27090 questions
+on every supported runtime.
 
 ## Why this repo exists
 
@@ -79,13 +117,19 @@ CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish
 ```
 ai-act-skills/
 ├── README.md                                   # This file
+├── AGENTS.md                                   # Codex / OpenAI / AGENTS-aware discovery
+├── GEMINI.md                                   # Gemini CLI session-start activation
+├── CHANGELOG.md
+├── CITATION.cff
 ├── LICENSE                                     # MIT
 └── skills/
     └── ai-act-compliance/
         ├── SKILL.md                            # Entry point + taxonomy + decision tree + 7 SSL scenes
         ├── ssl.json                            # Scheduling-Structural-Logical manifest (arXiv:2604.24026)
+        ├── AGENTS.md                           # Codex skill-level mirror
+        ├── GEMINI.md                           # Gemini CLI skill-level mirror
         ├── README.md                           # Skill-level README
-        ├── package.json                        # skills.sh metadata
+        ├── package.json                        # skills.sh metadata + platforms
         ├── LICENSE                             # MIT (skill-level)
         └── references/
             ├── 01-risk-classification.md       # 4-tier rubric + Annex III + edge cases
@@ -101,7 +145,8 @@ ai-act-skills/
             ├── 11-art4-ai-literacy.md          # AI literacy programme (in force since 2025-02-02)
             ├── 12-art25-substantial-modification.md  # provider-flip + foundation-model fine-tuning
             ├── 13-sandboxes-and-real-world-testing.md # art. 57-63 sandboxes + art. 60 testing
-            └── 14-codes-and-right-to-explanation.md  # art. 56 GPAI code + art. 95 voluntary + art. 86
+            ├── 14-codes-and-right-to-explanation.md  # art. 56 GPAI code + art. 95 voluntary + art. 86
+            └── 15-platform-compatibility.md    # Claude Code / Gemini CLI / Codex install + activation
 ```
 
 ## Machine-readable manifest (SSL)
@@ -124,7 +169,7 @@ This repository uses semantic versioning:
 - **Minor**: New ISO standard publication, JTC 21 OJEU citation
 - **Patch**: Editorial corrections, structural improvements
 
-Current version: **1.1.0** — SSL representation + 4 new references (art. 4, art. 25, art. 57–63, art. 56/86/95).
+Current version: **1.2.0** — Multi-platform support (Claude Code + Gemini CLI + OpenAI Codex) via `AGENTS.md` + `GEMINI.md` discovery files and a new `references/15-platform-compatibility.md`. Skill content unchanged from v1.1.0.
 
 ## Contributing
 
