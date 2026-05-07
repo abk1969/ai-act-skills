@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+title: "ai-act-skills: EU AI Act compliance skill aligned with ISO/IEC 42001 and ISO/IEC 27090, with SSL machine-readable manifest"
+message: "If you use this skill in research or production compliance work, please cite both this software and the SSL representation paper that the manifest implements."
+type: software
+authors:
+  - alias: abk1969
+    given-names: abk1969
+    website: "https://github.com/abk1969"
+repository-code: "https://github.com/abk1969/ai-act-skills"
+url: "https://github.com/abk1969/ai-act-skills"
+license: MIT
+version: 1.1.0
+date-released: "2026-05-07"
+keywords:
+  - eu-ai-act
+  - regulation-2024-1689
+  - iso-42001
+  - iso-27090
+  - aims
+  - ai-cybersecurity
+  - fria
+  - gpai
+  - claude-skill
+  - ssl-manifest
+  - scheduling-structural-logical
+
+references:
+  - type: article
+    title: "From Skill Text to Skill Structure: The Scheduling-Structural-Logical Representation for Agent Skills"
+    authors:
+      - family-names: Liang
+        given-names: Qiliang
+      - family-names: Wang
+        given-names: Hansi
+      - family-names: Liang
+        given-names: Zhong
+      - family-names: Liu
+        given-names: Yang
+    year: 2026
+    journal: "arXiv preprint"
+    identifiers:
+      - type: other
+        value: "arXiv:2604.24026"
+        description: arXiv preprint identifier
+    url: "https://arxiv.org/abs/2604.24026"
+    notes: "Defines the SSL representation that ssl.json implements."
+
+  - type: legislation
+    title: "Regulation (EU) 2024/1689 of the European Parliament and of the Council laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)"
+    year: 2024
+    url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    notes: "The legally binding source — the AI Act."
+
+  - type: standard
+    title: "ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system"
+    year: 2023
+    url: "https://www.iso.org/standard/81230.html"
+    institution:
+      name: International Organization for Standardization
+
+  - type: standard
+    title: "ISO/IEC 27090:2025 Cybersecurity — Artificial intelligence — Guidance for addressing security threats to artificial intelligence systems"
+    year: 2025
+    url: "https://www.iso.org/standard/56581.html"
+    institution:
+      name: International Organization for Standardization

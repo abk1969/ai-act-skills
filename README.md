@@ -2,9 +2,11 @@
 
 > Claude Code skills for **EU AI Act (Regulation 2024/1689)** compliance, anchored exclusively on **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090:2025** (AI cybersecurity).
 
+[![Latest release](https://img.shields.io/github/v/release/abk1969/ai-act-skills?display_name=tag&sort=semver&color=2ea043)](https://github.com/abk1969/ai-act-skills/releases/latest)
 [![EU AI Act](https://img.shields.io/badge/EU_AI_Act-2024%2F1689-1f4e79)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 [![ISO 42001](https://img.shields.io/badge/ISO%2FIEC-42001%3A2023-0066b3)](https://www.iso.org/standard/81230.html)
 [![ISO 27090](https://img.shields.io/badge/ISO%2FIEC-27090%3A2025-0066b3)](https://www.iso.org/standard/56581.html)
+[![SSL representation](https://img.shields.io/badge/SSL-arXiv%3A2604.24026-b31b1b)](https://arxiv.org/abs/2604.24026)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Skills in this repository
