@@ -29,7 +29,11 @@ Invoke when the conversation involves any of:
 - Transparency obligations (art. 50 — chatbots, generative content, deepfakes)
 - Post-market monitoring (art. 72)
 - Serious incident reporting (art. 73)
-- General-Purpose AI obligations (arts. 51–55)
+- General-Purpose AI obligations (arts. 51–55) + Code of Practice (art. 56)
+- AI literacy programmes (art. 4 — in force since **2025-02-02**)
+- Substantial-modification detection / provider-flip (art. 25, art. 43(4))
+- Regulatory sandboxes (art. 57–59) and real-world testing (art. 60–63)
+- Voluntary codes of conduct (art. 95) and right to explanation (art. 86)
 - Sanctions (art. 99) and timeline (art. 113)
 - Mapping AI Act articles to ISO 42001 / ISO 27090 controls
 
@@ -42,7 +46,8 @@ Invoke when the conversation involves any of:
 
 ```
 ai-act-compliance/
-├── SKILL.md                              # Entry point — triggers, taxonomy, decision tree
+├── SKILL.md                              # Entry point — triggers, taxonomy, decision tree, SSL scenes
+├── ssl.json                              # Machine-readable Scheduling-Structural-Logical manifest
 ├── README.md                             # This file
 ├── LICENSE                               # MIT
 ├── package.json                          # For skills.sh marketplace
@@ -56,10 +61,24 @@ ai-act-compliance/
     ├── 07-fria-art27.md                  # FRIA template + ISO 42005 alignment
     ├── 08-transparency-art50.md          # Disclosure UX + watermarking + C2PA
     ├── 09-post-market-art72-73.md        # PMM plan + incident reporting playbook
-    └── 10-gpai-and-timeline.md           # GPAI arts. 51-55, sanctions art. 99, timeline art. 113
+    ├── 10-gpai-and-timeline.md           # GPAI arts. 51-55, sanctions art. 99, timeline art. 113
+    ├── 11-art4-ai-literacy.md            # AI literacy programme (art. 4 — in force since 2025-02-02)
+    ├── 12-art25-substantial-modification.md  # Provider-flip detection + foundation-model fine-tuning
+    ├── 13-sandboxes-and-real-world-testing.md  # Art. 57–63 (regulatory sandboxes + art. 60 testing)
+    └── 14-codes-and-right-to-explanation.md   # Art. 56 GPAI Code of Practice + art. 95 voluntary + art. 86
 ```
 
 The entry point (`SKILL.md`) routes to the right reference based on the user's intent. Each reference is self-contained and includes a practical output template.
+
+### Machine-readable companion (`ssl.json`)
+
+`ssl.json` is a **Scheduling-Structural-Logical (SSL) manifest** built per Liang et al., *From Skill Text to Skill Structure* (arXiv:2604.24026, 2026). It exposes three layers:
+
+- **Scheduling layer** — `skill_id`, `skill_goal`, `intent_signature`, `tags`, `top_pattern`, `expected_inputs/outputs`, `dependencies`, `control_flow_features`, `entry_scene_id`, `subscenes`. Used by registries and routers for skill discovery without re-parsing SKILL.md.
+- **Structural layer** — 7 typed scenes (`PREPARE`, `ACQUIRE`, `REASON`, `ACT`, `VERIFY`, `RECOVER`, `FINALIZE`) with explicit input/output data contracts and `next_scene_rules` transitions.
+- **Logical layer** — 28 atomic logic steps with closed `act_type` and `resource_scope` vocabularies, `actor`, `instrument`, `preconditions`, `effects`, and `next_step_rules`. Useful for pre-execution risk review.
+
+The manifest is **derived from and grounded in** SKILL.md and references (per paper § 5.2: "SSL should not replace the source document"). It complements rather than substitutes the human-readable content. The skill declares **no network access, no credentials access, no code execution, no external tool calls** — `touches_sensitive_resources: false`.
 
 ## Installation
 
@@ -155,11 +174,16 @@ The author is not responsible for compliance decisions made on the basis of this
 
 ## Versioning
 
-This skill version: **1.0.0**
+This skill version: **1.1.0**
+
+Changelog:
+
+- **1.1.0** — SSL representation added (`ssl.json`); SKILL.md restructured into 7 typed SSL scenes; description tightened per writing-skills CSO rules; 4 new reference files added (art. 4 AI literacy, art. 25 substantial modification, art. 57–63 sandboxes & real-world testing, art. 56/95/86 codes & right to explanation).
+- **1.0.0** — Initial release.
 
 Update triggers:
 - Major: AI Act amendment (delegated act under art. 7), new Commission implementing act
-- Minor: New ISO standard publication, JTC 21 OJEU citation
+- Minor: New ISO standard publication, JTC 21 OJEU citation, SSL schema upgrade
 - Patch: Editorial corrections, structure improvements
 
 ## Contributing

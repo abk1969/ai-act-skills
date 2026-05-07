@@ -11,7 +11,7 @@
 
 | Skill | Description | Path |
 |-------|-------------|------|
-| [`ai-act-compliance`](./skills/ai-act-compliance) | Authoritative guide for EU AI Act compliance — risk classification, conformity assessment, technical documentation, FRIA, post-market monitoring — strictly aligned with ISO/IEC 42001 + 27090 | [`skills/ai-act-compliance`](./skills/ai-act-compliance) |
+| [`ai-act-compliance`](./skills/ai-act-compliance) | Authoritative guide for EU AI Act compliance — risk classification, conformity assessment, technical documentation, FRIA, post-market monitoring, AI literacy, substantial modification, sandboxes — strictly aligned with ISO/IEC 42001 + 27090. Ships with a machine-readable **SSL** manifest (`ssl.json`) per Liang et al. *From Skill Text to Skill Structure* (arXiv:2604.24026). | [`skills/ai-act-compliance`](./skills/ai-act-compliance) |
 
 ## Install
 
@@ -80,7 +80,8 @@ ai-act-skills/
 ├── LICENSE                                     # MIT
 └── skills/
     └── ai-act-compliance/
-        ├── SKILL.md                            # Entry point + taxonomy + decision tree
+        ├── SKILL.md                            # Entry point + taxonomy + decision tree + 7 SSL scenes
+        ├── ssl.json                            # Scheduling-Structural-Logical manifest (arXiv:2604.24026)
         ├── README.md                           # Skill-level README
         ├── package.json                        # skills.sh metadata
         ├── LICENSE                             # MIT (skill-level)
@@ -94,8 +95,24 @@ ai-act-skills/
             ├── 07-fria-art27.md                # FRIA template + ISO 42005
             ├── 08-transparency-art50.md        # disclosure UX + watermarking + C2PA
             ├── 09-post-market-art72-73.md      # PMM plan + incident reporting playbook
-            └── 10-gpai-and-timeline.md         # GPAI 51-55 + sanctions 99 + timeline 113
+            ├── 10-gpai-and-timeline.md         # GPAI 51-55 + sanctions 99 + timeline 113
+            ├── 11-art4-ai-literacy.md          # AI literacy programme (in force since 2025-02-02)
+            ├── 12-art25-substantial-modification.md  # provider-flip + foundation-model fine-tuning
+            ├── 13-sandboxes-and-real-world-testing.md # art. 57-63 sandboxes + art. 60 testing
+            └── 14-codes-and-right-to-explanation.md  # art. 56 GPAI code + art. 95 voluntary + art. 86
 ```
+
+## Machine-readable manifest (SSL)
+
+`skills/ai-act-compliance/ssl.json` is built per the **Scheduling-Structural-Logical (SSL)** representation introduced by Liang, Wang, Liang & Liu, *From Skill Text to Skill Structure: The Scheduling-Structural-Logical Representation for Agent Skills* (arXiv:2604.24026, 2026). It disentangles three layers:
+
+- **Scheduling**: `skill_id`, `skill_goal`, `intent_signature`, `tags`, `top_pattern`, `expected_inputs/outputs`, `dependencies`, `control_flow_features`, `entry_scene_id`, `subscenes`.
+- **Structural**: 7 typed scenes (`PREPARE_SCOPE`, `ACQUIRE_FACTS`, `REASON_TIER`, `ACT_OBLIGATIONS`, `VERIFY_ARTIFACTS`, `RECOVER_INCIDENT`, `FINALIZE_REPORT`) with explicit transitions.
+- **Logical**: 28 atomic logic steps with closed `act_type` and `resource_scope` vocabularies, `actor`, `instrument`, `preconditions`, `effects`, and `next_step_rules`.
+
+The manifest validates against the paper's Pass-4 rules: globally unique IDs, valid enums, valid containment links, valid entry pointers, transition targets either in-scope or terminal (`END_SUCCESS`/`END_FAIL`/`YIELD_SUCCESS`/`YIELD_FAIL`). The SKILL.md remains the source of truth — `ssl.json` is a derived, source-grounded view (per paper § 5.2: "SSL should not replace the source document").
+
+**Pre-execution risk profile**: this skill declares **no network access, no credentials access, no code execution, no external tool calls** — `touches_sensitive_resources: false`. All resource access is `LOCAL_FS` (reading reference files) or `MEMORY` (working memory).
 
 ## Versioning
 
@@ -105,7 +122,7 @@ This repository uses semantic versioning:
 - **Minor**: New ISO standard publication, JTC 21 OJEU citation
 - **Patch**: Editorial corrections, structural improvements
 
-Current version: **1.0.0** — initial release.
+Current version: **1.1.0** — SSL representation + 4 new references (art. 4, art. 25, art. 57–63, art. 56/86/95).
 
 ## Contributing
 
