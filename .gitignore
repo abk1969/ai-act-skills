@@ -18,3 +18,9 @@ node_modules/
 # Local notes
 *.local.md
 NOTES.md
+
+# Launch ops state (local, not committed)
+.launch-baseline.json
+.launch-history.csv
+.release-notes-*.md
+/tmp/
