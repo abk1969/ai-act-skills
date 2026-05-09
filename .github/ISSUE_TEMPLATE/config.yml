@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussion / question
+    url: https://github.com/abk1969/ai-act-skills/discussions
+    about: For open-ended questions, "Skills vs MCP servers", install help, or community feedback — please use Discussions, not Issues.
+  - name: ⚖️ Need legal advice?
+    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+    about: This skill is decision-support only — not legal advice. For binding interpretation, consult qualified counsel and (for high-risk AI) a notified body. The official AI Act text is on EUR-Lex.
+  - name: 📋 ISO 42001 certification
+    url: https://www.iso.org/standard/81230.html
+    about: For certifiable AI Management System work, contact an accredited ISO 42001 certification body. This skill structures the prep, not the audit.

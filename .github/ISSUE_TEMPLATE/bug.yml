@@ -1,0 +1,68 @@
+name: 🐛 Bug / citation error
+description: A citation, clause reference, deadline, or sanction figure is wrong, ambiguous, or out of date
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for citation errors, broken cross-references, frontmatter
+        issues, JSON validation failures, or anything that's just wrong.
+        For regulatory drift (the law itself changed), use the
+        **Regulatory drift** template instead.
+
+  - type: input
+    id: file
+    attributes:
+      label: File path
+      placeholder: "skills/ai-act-compliance/references/05-crosswalk-aiact-iso.md"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Section / line number
+      placeholder: "§ art. 9 / line 142"
+    validations:
+      required: false
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: Quote the incorrect text verbatim.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should be
+      description: |
+        Provide the correct citation, clause, or value, **with a source**
+        (EUR-Lex link, ISO catalogue entry, etc.).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical — wrong sanction figure, wrong effective date
+        - High — wrong article / clause / control number
+        - Medium — wrong cross-reference
+        - Low — typo / formatting
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have provided a verifiable source for the correction.
+          required: true
+        - label: I have searched existing issues to avoid duplication.
+          required: true

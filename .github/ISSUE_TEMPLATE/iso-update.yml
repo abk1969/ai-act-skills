@@ -1,0 +1,97 @@
+name: 📚 ISO standard update
+description: A new ISO/IEC standard relevant to the AI Act has been published or revised
+title: "[iso] "
+labels: ["iso", "needs-triage"]
+assignees:
+  - abk1969
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for ISO/IEC publications that affect the skill's anchoring:
+        AI Act art. 40 (presumption of conformity), art. 17 (QMS),
+        art. 9 (RMS), art. 15 (cybersecurity), art. 27 (FRIA / impact
+        assessment), or any of the companion standards listed in
+        `references/03-iso-42001-aims.md`.
+
+  - type: input
+    id: standard-id
+    attributes:
+      label: Standard identifier
+      placeholder: "ISO/IEC 42007:2026 / EN ISO/IEC 42001:2027 / ISO/IEC 24029-3:2026"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: standard-type
+    attributes:
+      label: Standard category
+      options:
+        - AI Management System (42001 family)
+        - AI cybersecurity (27090 family)
+        - AI risk management (23894 family)
+        - AI lifecycle (5338 family)
+        - Data quality for AI (5259 family)
+        - Robustness assessment (24029 family)
+        - Quality model for AI (25059 family)
+        - Impact assessment (42005 family)
+        - Audit & certification (42006 family)
+        - ML framework / terminology (23053 family)
+        - Other ISO/IEC AI standard
+        - CEN-CENELEC EN ISO (JTC 21 — harmonised path)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Published
+        - Under revision
+        - Draft (DIS / FDIS)
+        - New work item
+        - Cited in OJEU under M/593 (art. 40 presumption)
+    validations:
+      required: true
+
+  - type: input
+    id: oj-reference
+    attributes:
+      label: OJEU reference (if applicable)
+      description: For EN ISO standards under standardization mandate M/593.
+      placeholder: "OJ C / L reference; otherwise leave blank"
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What does this standard cover? (one paragraph)
+    validations:
+      required: true
+
+  - type: textarea
+    id: skill-impact
+    attributes:
+      label: Impact on this skill
+      description: |
+        Which AI Act articles does this standard operationalize? Which
+        skill files need updating?
+      placeholder: |
+        - Operationalizes: art. 9, art. 15
+        - Update `references/03-iso-42001-aims.md` § Annex A.X
+        - Update `references/05-crosswalk-aiact-iso.md` row Y
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have verified the standard ID and status against the ISO catalogue or CEN-CENELEC work programme.
+          required: true
+        - label: I understand this skill is decision-support, not legal advice.
+          required: true

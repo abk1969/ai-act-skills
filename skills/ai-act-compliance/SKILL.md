@@ -1,6 +1,18 @@
 ---
 name: ai-act-compliance
 description: Use when the user asks about EU AI Act (Regulation 2024/1689) compliance — classifying an AI system's risk tier (art. 5 prohibited / art. 6 + Annex III high-risk / art. 50 limited / minimal), evaluating conformity for high-risk AI (art. 8–17, 26–27), drafting Annex IV technical documentation, conducting a Fundamental Rights Impact Assessment (art. 27), checking AI literacy obligations (art. 4), detecting substantial modification (art. 25), planning regulatory sandboxes or real-world testing (art. 57, 60), GPAI obligations (art. 51–55), responding to a serious incident (art. 73), or mapping obligations to ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (AI cybersecurity). Do NOT use for GDPR-only questions (separate regime), generic ISO/IEC 27001 ISMS work, or non-EU AI regulations (NIST AI RMF for US).
+license: MIT
+compatibility: Multi-platform agent skill — runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Reference-only profile — no network, no credentials, no code execution, no tool calls. Permission scope is filesystem.read (own reference files only). Distributed via skills.sh and AGENTS.md / GEMINI.md discovery files.
+metadata:
+  author: abk1969
+  version: "1.2.0"
+  homepage: https://github.com/abk1969/ai-act-skills
+  manifest: ssl.json
+  manifest_schema: SSL-1.0
+  manifest_source: arXiv:2604.24026
+  platforms: claude-code,gemini-cli,codex
+  primary_anchors: regulation-2024-1689,iso-iec-42001-2023,iso-iec-27090-2025
+  decision_support_only: "true"
 ---
 
 # AI Act Compliance — EU Regulation 2024/1689

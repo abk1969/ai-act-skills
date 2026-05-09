@@ -1,6 +1,19 @@
 # ai-act-skills
 
-> **Multi-platform** agent skills for **EU AI Act (Regulation 2024/1689)** compliance, anchored exclusively on **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090:2025** (AI cybersecurity). Runs natively on **Claude Code**, **Gemini CLI**, and **OpenAI Codex**.
+**The first multi-platform agent skill for EU AI Act compliance —
+runs natively on Claude Code, Gemini CLI, and OpenAI Codex with
+strict ISO/IEC 42001:2023 (AIMS) + 27090:2025 (AI cybersecurity)
+anchoring. Citation-grade. Decision-support, not legal advice.**
+
+> Codifies EU AI Act (Regulation 2024/1689) compliance work —
+> risk classification (art. 5/6/50), conformity assessment (arts. 8–17,
+> 26–27), Annex IV technical documentation, FRIA (art. 27), AI literacy
+> (art. 4), substantial modification (art. 25), regulatory sandboxes
+> (arts. 57–63), GPAI (arts. 51–55), serious-incident reporting
+> (art. 73). Every obligation cites article + clause + Annex A control
+> (e.g., `art. 9(2)(a)`, `cl. 6.1.4`, `A.5.4`). 15 reference files,
+> machine-readable SSL manifest per
+> [arXiv:2604.24026](https://arxiv.org/abs/2604.24026).
 
 [![Latest release](https://img.shields.io/github/v/release/abk1969/ai-act-skills?display_name=tag&sort=semver&color=2ea043)](https://github.com/abk1969/ai-act-skills/releases/latest)
 [![EU AI Act](https://img.shields.io/badge/EU_AI_Act-2024%2F1689-1f4e79)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)

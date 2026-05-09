@@ -1,0 +1,52 @@
+ai-act-skills
+Copyright (c) 2026 abk1969
+
+This product includes software developed by abk1969 and the
+ai-act-skills contributors, distributed under the MIT License (see LICENSE).
+
+================================================================================
+DISCLAIMER ON USE
+================================================================================
+
+These skills provide DECISION-SUPPORT for EU AI Act (Regulation (EU) 2024/1689)
+compliance, anchored on ISO/IEC 42001:2023 (AI Management System) and
+ISO/IEC 27090:2025 (AI cybersecurity).
+
+They do NOT constitute legal advice and do NOT substitute for:
+
+  * Qualified legal counsel for binding interpretation of the regulation
+  * Notified-body conformity assessment (art. 43) for high-risk AI systems
+    under the Annex VII path (where applicable)
+  * Accredited certification body audit for ISO/IEC 42001 certification
+  * Member-State competent-authority approval for regulatory sandboxes
+    (art. 57) or real-world testing (art. 60)
+
+USE AT YOUR OWN RISK. Verify all skill outputs against the authoritative
+sources (EUR-Lex, ISO catalogue, OJEU citations, AI Office publications,
+JTC 21 work programme) before making compliance decisions or representations
+to authorities.
+
+================================================================================
+THIRD-PARTY ATTRIBUTIONS
+================================================================================
+
+This skill incorporates concepts from:
+
+  * Liang, Wang, Liang & Liu — "From Skill Text to Skill Structure: The
+    Scheduling-Structural-Logical Representation for Agent Skills"
+    (arXiv:2604.24026, 2026). The SSL representation in `ssl.json` follows
+    Pass-4 validation rules from this paper. Use is consistent with the
+    paper's stated reproducibility intent.
+
+  * Regulation (EU) 2024/1689 (AI Act) — official text reproduced or
+    paraphrased under the European Commission's reuse policy
+    (Decision 2011/833/EU). Article and recital citations are exact.
+
+  * ISO/IEC standards (42001, 27090, 23894, 23053, 5338, 5259, 24029,
+    25059, 42005, 42006, 4213) — clause and Annex A control numbers are
+    cited for navigation; the standards' content is NOT reproduced.
+    Subscribers should obtain authoritative copies from
+    https://www.iso.org or their national standards body.
+
+  * GPAI Code of Practice (art. 56) — operative version when published by
+    the European AI Office; cited as a regulatory anchor.

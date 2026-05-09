@@ -1,0 +1,126 @@
+name: 🚨 Regulatory drift
+description: Report a Commission act, OJEU citation, ISO publication, or other event that requires the skill to be updated
+title: "[drift] "
+labels: ["regulatory-drift", "needs-triage"]
+assignees:
+  - abk1969
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for surfacing regulatory drift — this is the highest-priority
+        contribution category. Please fill in as much as you can; partial
+        information is still useful.
+
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: Source type
+      description: What kind of regulatory event triggered this?
+      options:
+        - Commission delegated act (art. 7 — Annex III amendment)
+        - Commission implementing act (other articles)
+        - JTC 21 EN ISO standard cited in OJEU (art. 40 presumption)
+        - New ISO standard published
+        - GPAI Code of Practice update (art. 56)
+        - AI Office decision / guidance
+        - Member State sandbox regulation
+        - CJEU / national court judgment on AI Act
+        - Serious-incident reporting threshold revision (art. 73)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: source-citation
+    attributes:
+      label: Source citation
+      description: |
+        OJ reference, ISO standard number, court case ID, or URL.
+      placeholder: "OJ L 2026/Cxxx, 2026-MM-DD; or ISO/IEC 42007:2026; or CJEU C-XXX/26"
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Direct link to the source document.
+      placeholder: "https://eur-lex.europa.eu/eli/dec_impl/2026/..."
+    validations:
+      required: false
+
+  - type: input
+    id: effective-date
+    attributes:
+      label: Effective date
+      description: When does this enter into force / become applicable?
+      placeholder: "YYYY-MM-DD or 'on entry into force' / 'M+12'"
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: |
+        Briefly: what does this change? Quote the operative provision if
+        possible. Avoid paraphrasing — the precise text matters.
+      placeholder: |
+        Article 1: ...
+        Article 2: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: skill-impact
+    attributes:
+      label: Impact on this skill
+      description: |
+        Which reference files and SKILL.md sections need updating? Be
+        specific.
+      placeholder: |
+        - `references/01-risk-classification.md` — § Annex III §3 needs
+          a new sub-bullet
+        - `references/05-crosswalk-aiact-iso.md` — row for art. 11(3)
+          should now cite the implementing-act template
+        - `SKILL.md` — anti-pattern #X may need updating
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity / urgency
+      description: How fast does this need to be reflected?
+      options:
+        - Critical — breaking change in obligations (within days)
+        - High — significant change (within 2 weeks)
+        - Medium — incremental refinement (next minor release)
+        - Low — editorial / clarification (next patch)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version-impact
+    attributes:
+      label: Version bump expected
+      options:
+        - Major — AI Act amendment / breaking schema change
+        - Minor — new ISO / OJEU citation / new reference
+        - Patch — editorial
+        - Unsure — please assess
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have verified the citation is accurate (article number, paragraph, date).
+          required: true
+        - label: I have searched existing issues to avoid duplication.
+          required: true
+        - label: I understand this skill is decision-support, not legal advice.
+          required: true
