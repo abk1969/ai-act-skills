@@ -174,6 +174,68 @@ The manifest validates against the paper's Pass-4 rules: globally unique IDs, va
 
 **Pre-execution risk profile**: this skill declares **no network access, no credentials access, no code execution, no external tool calls** — `touches_sensitive_resources: false`. All resource access is `LOCAL_FS` (reading reference files) or `MEMORY` (working memory).
 
+## FAQ
+
+### Is this a Claude Code skill, a Gemini CLI skill, or an OpenAI Codex skill?
+
+It's **all three**. Since v1.2.0, the same skill content runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Only the discovery file differs per platform (`SKILL.md` for Claude Code via `~/.claude/skills/`, `GEMINI.md` for Gemini CLI via `~/.gemini/skills/`, `AGENTS.md` for OpenAI Codex via `~/.agents/skills/`). The 15 reference files and the SSL manifest are byte-identical across runtimes.
+
+### Why anchor on ISO 42001 + 27090 instead of ISO 27001?
+
+ISO/IEC 42001:2023 is the AI-specific Management System standard. It includes AI-specific clauses (cl. 6.1.4 AI system impact assessment) and Annex A controls (A.5–A.10) that ISO 27001 does not cover. ISO/IEC 27090:2025 is the AI-specific cybersecurity depth standard, with a threat taxonomy that maps directly to AI Act art. 15(5) Recital 76 (data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws). ISO 27001 remains useful as the org-level ISMS baseline that 42001 + 27090 build upon — but it is not the AI-specific framework for AI Act conformity. CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish EN ISO/IEC 42001 / 23894 / 27090 as harmonised standards conferring AI Act art. 40 presumption of conformity.
+
+### How does this differ from MCP servers like ark-forge/mcp-eu-ai-act?
+
+This skill codifies the regulation. An MCP server automates scans. A benchmark framework like [`compl-ai`](https://github.com/compl-ai/compl-ai) (ETH Zurich + INSAIT + LatticeFlow AI) evaluates models. They are complementary, not substitutes. A serious AI Act compliance program likely uses **all three**: the skill to structure the dossier and identify obligations, an MCP server to automate codebase scans in CI/CD, and a benchmark to evaluate any foundation models you ship. See [Discussion #2](https://github.com/abk1969/ai-act-skills/discussions/2) for the full positioning.
+
+### Is this legal advice?
+
+**No.** This is decision-support. Final EU AI Act conformity assessment requires qualified legal counsel for binding interpretation, a notified body for conformity assessment of high-risk AI systems under the Annex VII path (where applicable, per art. 43), and an accredited certification body for ISO/IEC 42001 certification. Use this skill to structure your work, not to substitute for professional review.
+
+### When does the EU AI Act fully apply?
+
+Key dates from art. 113:
+
+- **2024-08-01** — Regulation enters into force
+- **2025-02-02** — Art. 5 prohibitions + Art. 4 AI literacy effective
+- **2025-08-02** — GPAI obligations (Chapter V) + governance + penalties
+- **2026-08-02** — Full application of high-risk regime, art. 50 transparency, art. 57 sandboxes, art. 95 codes
+- **2027-08-02** — Annex I product-safety pathway
+
+### What are the sanctions?
+
+Three tiers under art. 99:
+
+- **Tier 1**: €35M or 7% global turnover — for art. 5 prohibited practices
+- **Tier 2**: €15M or 3% global turnover — for most other provisions (arts. 8-17, 26-29, 50, 53-55)
+- **Tier 3**: €7.5M or 1.5% global turnover — for incorrect/incomplete/misleading info to authorities
+
+For SMEs and startups, the **lower** of the fixed amount or percentage applies (art. 99(6)).
+
+### Does my AI system fall under art. 4 AI literacy?
+
+If you are a provider OR deployer of any AI system that interacts with people in the EU, **yes**. Art. 4 has applied since 2025-02-02, regardless of risk tier (minimal, limited, high, or universal/GPAI). It mandates measures to ensure sufficient AI literacy of staff and other persons dealing with the operation/use of the AI system on the organisation's behalf. See [`references/11-art4-ai-literacy.md`](skills/ai-act-compliance/references/11-art4-ai-literacy.md).
+
+### How do I install this on Claude Code / Gemini CLI / OpenAI Codex?
+
+```bash
+# Claude Code
+npx skills add abk1969/ai-act-skills@ai-act-compliance -g -y
+
+# Gemini CLI
+git clone https://github.com/abk1969/ai-act-skills && \
+  mkdir -p ~/.gemini/skills/ && \
+  cp -R ai-act-skills/skills/ai-act-compliance ~/.gemini/skills/
+
+# OpenAI Codex
+git clone https://github.com/abk1969/ai-act-skills && \
+  mkdir -p ~/.agents/skills/ && \
+  cp -R ai-act-skills/skills/ai-act-compliance ~/.agents/skills/
+```
+
+Full activation contract per platform:
+[`skills/ai-act-compliance/references/15-platform-compatibility.md`](skills/ai-act-compliance/references/15-platform-compatibility.md).
+
 ## Versioning
 
 This repository uses semantic versioning:
@@ -182,7 +244,7 @@ This repository uses semantic versioning:
 - **Minor**: New ISO standard publication, JTC 21 OJEU citation
 - **Patch**: Editorial corrections, structural improvements
 
-Current version: **1.2.0** — Multi-platform support (Claude Code + Gemini CLI + OpenAI Codex) via `AGENTS.md` + `GEMINI.md` discovery files and a new `references/15-platform-compatibility.md`. Skill content unchanged from v1.1.0.
+Current version: **1.2.1** — Community plumbing + SEO foundation. CONTRIBUTING, ROADMAP, SECURITY, NOTICE, 4 issue templates, FUNDING.yml. LICENSE restored to canonical MIT (disclaimer moved to NOTICE). README first-fold elevator paragraph. SKILL.md frontmatter declares agentskills.io spec optional fields. No regulatory content changed from v1.2.0.
 
 ## Contributing
 
