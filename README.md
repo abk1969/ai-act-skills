@@ -24,6 +24,7 @@ anchoring. Citation-grade. Decision-support, not legal advice.**
 [![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-supported-1a73e8)](https://github.com/google-gemini/gemini-cli)
 [![Codex](https://img.shields.io/badge/OpenAI_Codex-supported-10a37f)](https://openai.com/codex)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Mentioned in Awesome EU AI Act](https://awesome.re/mentioned-badge.svg)](https://github.com/GenAI-Gurus/awesome-eu-ai-act#eu-ai-act-compliance-platforms)
 
 ## Skills in this repository
 
