@@ -1,10 +1,10 @@
 # ai-act-compliance
 
-> Authoritative **multi-platform** agent skill for **EU AI Act (Regulation 2024/1689)** compliance — strictly aligned with **ISO/IEC 42001:2023** (AIMS) and **ISO/IEC 27090:2025** (AI cybersecurity). Runs natively on **Claude Code**, **Gemini CLI**, and **OpenAI Codex**.
+> Authoritative **multi-platform** agent skill for **EU AI Act (Regulation 2024/1689)** compliance — strictly aligned with **ISO/IEC 42001:2023** (AIMS) and **ISO/IEC 27090 (FDIS)** (AI cybersecurity). Runs natively on **Claude Code**, **Gemini CLI**, and **OpenAI Codex**.
 
 [![EU AI Act](https://img.shields.io/badge/EU_AI_Act-2024%2F1689-1f4e79)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 [![ISO 42001](https://img.shields.io/badge/ISO%2FIEC-42001%3A2023-0066b3)](https://www.iso.org/standard/81230.html)
-[![ISO 27090](https://img.shields.io/badge/ISO%2FIEC-27090%3A2025-0066b3)](https://www.iso.org/standard/56581.html)
+[![ISO 27090](https://img.shields.io/badge/ISO%2FIEC-27090_FDIS-0066b3)](https://www.iso.org/standard/56581.html)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-supported-7c3aed)](https://claude.com/claude-code)
 [![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-supported-1a73e8)](https://github.com/google-gemini/gemini-cli)
 [![Codex](https://img.shields.io/badge/OpenAI_Codex-supported-10a37f)](https://openai.com/codex)
@@ -15,7 +15,7 @@ Provides decision-support for AI Act compliance work, with every output traceabl
 
 - **Regulation (EU) 2024/1689** — the AI Act itself (the legally binding source)
 - **ISO/IEC 42001:2023** — AI Management System (AIMS), the certifiable management standard
-- **ISO/IEC 27090:2025** — Cybersecurity guidance for AI (depth standard for art. 15)
+- **ISO/IEC 27090 (FDIS)** — Cybersecurity guidance for AI (depth standard for art. 15)
 - **Companion ISO standards**: 23894 (risk mgmt), 23053 (ML framework), 5338 (lifecycle), 5259-* (data quality), 24029-2 (robustness), 42005 (impact assessment), 42006 (audit & certification)
 - **CEN-CENELEC JTC 21** harmonised standards under standardization mandate M/593
 
@@ -163,7 +163,7 @@ Full activation matrix and smoke-test procedure:
 Many AI compliance efforts mistakenly anchor on ISO 27001 (generic information security management). This skill is uncompromising on the alignment:
 
 - **ISO/IEC 42001:2023** (AIMS) is the **AI-specific** management standard. It includes AI-specific clauses (cl. 6.1.4 AI system impact assessment) and Annex A controls (A.5 impact, A.6 lifecycle, A.7 data, A.8 information for parties, A.9 use, A.10 third parties) that ISO 27001 does not cover.
-- **ISO/IEC 27090:2025** is the **AI-specific cybersecurity** depth standard. Its threat taxonomy directly maps to AI Act art. 15(5) Recital 76 named threats: data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws.
+- **ISO/IEC 27090 (FDIS)** is the **AI-specific cybersecurity** depth standard. Its threat taxonomy directly maps to AI Act art. 15(5) Recital 76 named threats: data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws.
 - ISO 27001 remains useful as the **org-level ISMS baseline** that 42001 + 27090 build upon — but it is NOT the AI-specific framework for AI Act conformity.
 
 CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish **EN ISO/IEC 42001 / 23894 / 27090** as harmonised standards conferring AI Act art. 40 presumption of conformity. This skill anticipates that path.
@@ -205,7 +205,7 @@ The author is not responsible for compliance decisions made on the basis of this
 | 2026 AI Omnibus amendment | Adopted (Parliament 2026-06-16, Council 2026-06-29); OJ publication expected July 2026 | Timeline + art. 5 amendment source |
 | GPAI Code of Practice (art. 56) | Published 2025-07-10; adequacy confirmed 2025-08-01 | Operative GPAI compliance instrument |
 | ISO/IEC 42001:2023 | Published; certifiable | Primary AIMS standard |
-| ISO/IEC 27090:2025 | Published; informative | Primary AI security standard |
+| ISO/IEC 27090 | FDIS (ballot closed 2026-06-23); publication expected 2026 | Primary AI security standard |
 | ISO/IEC 23894:2023 | Published; informative | AI risk management depth |
 | ISO/IEC 23053:2022 | Published | ML framework + terminology |
 | ISO/IEC 5338:2023 | Published | AI lifecycle processes |
@@ -220,10 +220,11 @@ The author is not responsible for compliance decisions made on the basis of this
 
 ## Versioning
 
-This skill version: **2.0.0**
+This skill version: **2.0.1**
 
 Changelog:
 
+- **2.0.1** — Audit fixes (2026-07-14): ISO/IEC 27090 re-cited as **FDIS** (ballot closed 2026-06-23, publication expected 2026 — it was wrongly cited as a published ":2025" standard, 14 occurrences + ssl.json anchor + badges); added the **GPAI qualification presumption** (>10²³ FLOPs training compute + generative capability, Commission GPAI guidelines 2025-07-18) to SKILL.md and reference 10 — previously only the 10²⁵ systemic-risk threshold was stated.
 - **2.0.0** — Regulatory content update to the post-Omnibus AI Act: 2026 AI Omnibus amendment (Annex III high-risk deferred to 2027-12-02, Annex I to 2028-08-02, new art. 5 NCII/CSAM prohibition applicable 2026-12-02, art. 50(2) marking grace period, sandboxes deferred to 2027-08-02, machinery carve-out, art. 4 wording softened); GPAI Code of Practice operative status (published 2025-07-10, three chapters, adequacy 2025-08-01) + Commission GPAI guidelines and training-data-summary template; JTC 21 harmonised-standards acceleration (prEN 18228 / prEN 18284, Q4 2026); Commission draft guidance landed (art. 6 classification 2026-05-19; art. 73 incident reporting + template 2025-09-26). Major bump per versioning legend (AI Act amendment).
 - **1.2.0** — Multi-platform compatibility: native support for Claude Code, Gemini CLI, and OpenAI Codex via host-specific discovery files (`AGENTS.md`, `GEMINI.md`) at root + skill level. New `references/15-platform-compatibility.md` documents the activation matrix. `package.json` declares `platforms` and per-platform install paths. Skill content (regulatory expertise, ISO anchors) unchanged — only discovery and packaging extended.
 - **1.1.0** — SSL representation added (`ssl.json`); SKILL.md restructured into 7 typed SSL scenes; description tightened per writing-skills CSO rules; 4 new reference files added (art. 4 AI literacy, art. 25 substantial modification, art. 57–63 sandboxes & real-world testing, art. 56/95/86 codes & right to explanation).

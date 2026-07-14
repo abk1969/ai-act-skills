@@ -34,7 +34,7 @@
       {"type": "capability", "value": "legal_decision_support"},
       {"type": "knowledge", "value": "regulation_eu_2024_1689"},
       {"type": "knowledge", "value": "iso_iec_42001_2023"},
-      {"type": "knowledge", "value": "iso_iec_27090_2025"}
+      {"type": "knowledge", "value": "iso_iec_27090_fdis"}
     ],
     "tags": [
       "eu-ai-act",

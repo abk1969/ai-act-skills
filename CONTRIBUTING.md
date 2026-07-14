@@ -145,7 +145,7 @@ For citation accuracy, verify against:
 - The official EUR-Lex text:
   <https://eur-lex.europa.eu/eli/reg/2024/1689/oj>
 - The ISO 42001:2023 standard (paid)
-- The ISO 27090:2025 standard (paid)
+- The ISO/IEC FDIS 27090 (final draft; publication expected 2026 — paid)
 - JTC 21 work programme:
   <https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/>
 

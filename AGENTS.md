@@ -12,7 +12,7 @@
 
 **Description** — Authoritative EU AI Act (Regulation 2024/1689)
 compliance skill, strictly anchored on **ISO/IEC 42001:2023** (AIMS)
-and **ISO/IEC 27090:2025** (AI cybersecurity).
+and **ISO/IEC 27090 (FDIS)** (AI cybersecurity).
 
 **Triggers** — Risk classification (art. 5/6/50), conformity assessment
 (arts. 8–17, 26–27), Annex IV technical documentation, FRIA (art. 27),

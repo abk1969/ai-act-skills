@@ -15,7 +15,7 @@ risk classification, conformity assessment, Annex IV documentation,
 FRIA, AI literacy (art. 4), substantial modification (art. 25),
 regulatory sandboxes (arts. 57–63), GPAI (arts. 51–55), serious-
 incident reporting (art. 73), ISO/IEC 42001:2023 (AIMS) and
-ISO/IEC 27090:2025 (AI cybersecurity) mapping.
+ISO/IEC 27090 (FDIS) (AI cybersecurity) mapping.
 
 ## Activation contract
 

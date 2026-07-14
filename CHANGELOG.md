@@ -5,6 +5,27 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] — 2026-07-14
+
+### Fixed — Audit findings (regulatory citation accuracy)
+
+- **ISO/IEC 27090 is not a published standard** — it was cited throughout
+  as "ISO/IEC 27090:2025", implying 2025 publication. As of 2026-07-14 it
+  is at **FDIS** stage (Final Draft International Standard; FDIS ballot
+  closed 2026-06-23; publication expected in the course of 2026 — see
+  iso.org/standard/56581.html). All occurrences re-cited as
+  "ISO/IEC 27090 (FDIS)" with an explicit status note in
+  `references/04`, the README status table, badges, `ssl.json` knowledge
+  anchor (`iso_iec_27090_fdis`), `llms.txt`, `CITATION.cff`,
+  `CONTRIBUTING.md`, and the launch docs.
+- **GPAI qualification presumption added** — the Commission GPAI
+  guidelines (2025-07-18) presume a model is GPAI when trained with
+  **>10²³ FLOPs** AND capable of generating language, text-to-image or
+  text-to-video. The skill previously stated only the 10²⁵ FLOPs
+  systemic-risk presumption (art. 51(2)). Added to `SKILL.md` and
+  `references/10-gpai-and-timeline.md` §1.2, with the caution that the
+  qualitative art. 3(63) definition governs in edge cases.
+
 ## [2.0.0] — 2026-07-14
 
 ### Changed — Regulatory content: the 2026 AI Omnibus amendment

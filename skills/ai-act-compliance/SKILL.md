@@ -5,13 +5,13 @@ license: MIT
 compatibility: Multi-platform agent skill — runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Reference-only profile — no network, no credentials, no code execution, no tool calls. Permission scope is filesystem.read (own reference files only). Distributed via skills.sh and AGENTS.md / GEMINI.md discovery files.
 metadata:
   author: abk1969
-  version: "2.0.0"
+  version: "2.0.1"
   homepage: https://github.com/abk1969/ai-act-skills
   manifest: ssl.json
   manifest_schema: SSL-1.0
   manifest_source: arXiv:2604.24026
   platforms: claude-code,gemini-cli,codex
-  primary_anchors: regulation-2024-1689,iso-iec-42001-2023,iso-iec-27090-2025
+  primary_anchors: regulation-2024-1689,iso-iec-42001-2023,iso-iec-27090-fdis
   decision_support_only: "true"
 ---
 
@@ -23,7 +23,7 @@ Codifies actionable EU AI Act compliance expertise. Every output is **traceable*
 
 1. **Regulation (EU) 2024/1689** — *the AI Act* — the legally binding source.
 2. **ISO/IEC 42001:2023** — Artificial Intelligence Management System (AIMS), the certifiable management standard for AI providers and deployers.
-3. **ISO/IEC 27090:2025** — Cybersecurity guidance for AI systems (the depth standard for AI Act art. 15 cybersecurity).
+3. **ISO/IEC 27090 (FDIS)** — Cybersecurity guidance for AI systems (the depth standard for AI Act art. 15 cybersecurity).
 4. **Companion ISO standards**: 23894 (AI risk management), 23053 (ML framework), 5338 (AI lifecycle), 5259-* (data quality), 24029-2 (robustness), 42005 (impact assessment), 42006 (audit & certification).
 5. **CEN-CENELEC JTC 21** harmonised standards (under standardization mandate M/593) — the path to art. 40 presumption of conformity.
 6. **GPAI Code of Practice** — published 2025-07-10; assessed adequate by the Commission and AI Board on 2025-08-01 — the operative instrument for arts. 53–55 until harmonised standards land.
@@ -83,7 +83,7 @@ Invoke when the user mentions or implies any of:
 | **Limited** | Direct interaction with natural persons (chatbots), emotion recognition or biometric categorisation, synthetic / manipulated content (deepfakes), AI-generated text on matters of public interest | Transparency obligations only (notify users, mark generated content) | Art. 50 |
 | **Minimal** | Everything else | Voluntary codes of conduct (art. 95) | — |
 
-**General-Purpose AI (GPAI)** is a separate axis: arts. 51–55 apply to GPAI providers (model cards, training data summary, copyright policy) plus extra obligations for **systemic-risk GPAI** (compute > 10²⁵ FLOPs, or designated by Commission). The **GPAI Code of Practice** (art. 56) — published **2025-07-10** with three chapters (Transparency, Copyright, Safety & Security) and assessed adequate by the Commission and AI Board on **2025-08-01** — is the operative compliance instrument. GPAI obligations apply since **2025-08-02**; Commission enforcement powers (art. 101 fines) from **2026-08-02**.
+**General-Purpose AI (GPAI)** is a separate axis: arts. 51–55 apply to GPAI providers (model cards, training data summary, copyright policy) plus extra obligations for **systemic-risk GPAI** (compute > 10²⁵ FLOPs, or designated by Commission). GPAI qualification itself is presumed from **> 10²³ FLOPs** training compute combined with generative capability (text/audio, text-to-image or text-to-video) per the Commission GPAI guidelines (2025-07-18) — the qualitative art. 3(63) definition governs in edge cases. The **GPAI Code of Practice** (art. 56) — published **2025-07-10** with three chapters (Transparency, Copyright, Safety & Security) and assessed adequate by the Commission and AI Board on **2025-08-01** — is the operative compliance instrument. GPAI obligations apply since **2025-08-02**; Commission enforcement powers (art. 101 fines) from **2026-08-02**.
 
 ### Universal obligations (apply regardless of tier)
 

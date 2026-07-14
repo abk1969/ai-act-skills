@@ -27,7 +27,7 @@ Sanctions : 35 M€ ou 7% du CA mondial.
 Le bon standard, ce n'est PAS ISO 27001 (ISMS générique). C'est :
 
 → ISO/IEC 42001:2023 — l'AI Management System certifiable
-→ ISO/IEC 27090:2025 — la cybersécurité spécifique IA
+→ ISO/IEC 27090 (FDIS) — la cybersécurité spécifique IA
 → EN ISO 42001/27090 (JTC 21) — futur ancrage art. 40 présomption
    de conformité
 

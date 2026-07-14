@@ -194,7 +194,7 @@ CONSEQUENCES IF FLIP
 CITATIONS
   - AI Act art. 25; art. 3(23); art. 43(4); art. 16; art. 11 + Annex IV §6
   - ISO/IEC 42001:2023 cl. 6.3, 8.4, 6.1.4 + Annex A.5.2, A.10.3
-  - ISO/IEC 27090:2025 sect. 4.6 (operational lifecycle change)
+  - ISO/IEC 27090 (FDIS) sect. 4.6 (operational lifecycle change)
 
 LEGAL DISCLAIMER
   Decision-support output. Not legal advice. Substantial-modification

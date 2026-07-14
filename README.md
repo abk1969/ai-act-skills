@@ -2,7 +2,7 @@
 
 **The first multi-platform agent skill for EU AI Act compliance —
 runs natively on Claude Code, Gemini CLI, and OpenAI Codex with
-strict ISO/IEC 42001:2023 (AIMS) + 27090:2025 (AI cybersecurity)
+strict ISO/IEC 42001:2023 (AIMS) + 27090 (FDIS, AI cybersecurity)
 anchoring. Citation-grade. Decision-support, not legal advice.**
 
 > Codifies EU AI Act (Regulation 2024/1689) compliance work —
@@ -104,7 +104,7 @@ The skill is **decision-support**, not legal advice — explicitly so. Final con
 
 - **Regulation (EU) 2024/1689** (AI Act) — primary source
 - **ISO/IEC 42001:2023** — AIMS, the AI-specific management system standard
-- **ISO/IEC 27090:2025** — AI cybersecurity guidance
+- **ISO/IEC 27090 (FDIS)** — AI cybersecurity guidance
 - **ISO/IEC 23894:2023** — AI risk management
 - **ISO/IEC 23053:2022** — ML framework
 - **ISO/IEC 5338:2023** — AI lifecycle processes
@@ -121,7 +121,7 @@ The skill is **decision-support**, not legal advice — explicitly so. Final con
 Many AI compliance efforts mistakenly anchor on ISO 27001 (generic information security management). This repository is uncompromising on the alignment:
 
 - **ISO/IEC 42001:2023** is the **AI-specific** management standard. It includes AI-specific clauses (cl. 6.1.4 AI system impact assessment) and Annex A controls (A.5 impact, A.6 lifecycle, A.7 data, A.8 information for parties, A.9 use, A.10 third parties) that ISO 27001 does not cover.
-- **ISO/IEC 27090:2025** is the **AI-specific cybersecurity** depth standard. Its threat taxonomy directly maps to AI Act art. 15(5) Recital 76 named threats: data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws.
+- **ISO/IEC 27090 (FDIS)** is the **AI-specific cybersecurity** depth standard. Its threat taxonomy directly maps to AI Act art. 15(5) Recital 76 named threats: data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws.
 - ISO 27001 remains useful as the **org-level ISMS baseline** that 42001 + 27090 build upon — but it is NOT the AI-specific framework for AI Act conformity.
 
 CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish **EN ISO/IEC 42001 / 23894 / 27090** as harmonised standards conferring AI Act art. 40 presumption of conformity. This skill anticipates that path.
@@ -183,7 +183,7 @@ It's **all three**. Since v1.2.0, the same skill content runs natively on Claude
 
 ### Why anchor on ISO 42001 + 27090 instead of ISO 27001?
 
-ISO/IEC 42001:2023 is the AI-specific Management System standard. It includes AI-specific clauses (cl. 6.1.4 AI system impact assessment) and Annex A controls (A.5–A.10) that ISO 27001 does not cover. ISO/IEC 27090:2025 is the AI-specific cybersecurity depth standard, with a threat taxonomy that maps directly to AI Act art. 15(5) Recital 76 (data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws). ISO 27001 remains useful as the org-level ISMS baseline that 42001 + 27090 build upon — but it is not the AI-specific framework for AI Act conformity. CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish EN ISO/IEC 42001 / 23894 / 27090 as harmonised standards conferring AI Act art. 40 presumption of conformity.
+ISO/IEC 42001:2023 is the AI-specific Management System standard. It includes AI-specific clauses (cl. 6.1.4 AI system impact assessment) and Annex A controls (A.5–A.10) that ISO 27001 does not cover. ISO/IEC 27090 (FDIS) is the AI-specific cybersecurity depth standard, with a threat taxonomy that maps directly to AI Act art. 15(5) Recital 76 (data poisoning, model poisoning, model evasion, confidentiality attacks, model flaws). ISO 27001 remains useful as the org-level ISMS baseline that 42001 + 27090 build upon — but it is not the AI-specific framework for AI Act conformity. CEN-CENELEC JTC 21 (under standardization mandate M/593) is on a path to publish EN ISO/IEC 42001 / 23894 / 27090 as harmonised standards conferring AI Act art. 40 presumption of conformity.
 
 ### How does this differ from MCP servers like ark-forge/mcp-eu-ai-act?
 
@@ -250,7 +250,7 @@ This repository uses semantic versioning:
 - **Minor**: New ISO standard publication, JTC 21 OJEU citation
 - **Patch**: Editorial corrections, structural improvements
 
-Current version: **2.0.0** — Regulatory content update: the **2026 AI Omnibus** amendment (deferred high-risk dates 2027-12-02 / 2028-08-02, new art. 5 NCII/CSAM prohibition, art. 50(2) grace period, sandbox deferral, machinery carve-out) + **GPAI Code of Practice** operative status (published 2025-07-10, adequacy 2025-08-01) + JTC 21 harmonised-standards status + Commission draft guidance (art. 6 classification, art. 73 incident reporting). Major bump per the versioning legend: AI Act amendment.
+Current version: **2.0.1** — Regulatory content update: the **2026 AI Omnibus** amendment (deferred high-risk dates 2027-12-02 / 2028-08-02, new art. 5 NCII/CSAM prohibition, art. 50(2) grace period, sandbox deferral, machinery carve-out) + **GPAI Code of Practice** operative status (published 2025-07-10, adequacy 2025-08-01) + JTC 21 harmonised-standards status + Commission draft guidance (art. 6 classification, art. 73 incident reporting). Major bump per the versioning legend: AI Act amendment.
 
 ## Contributing
 

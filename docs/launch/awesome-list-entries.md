@@ -18,13 +18,13 @@ Ready-to-paste entries for awesome-* lists. Status of submissions:
 ## Standard one-line entry (use this format if the list expects 1-line entries)
 
 ```markdown
-- **[ai-act-skills](https://github.com/abk1969/ai-act-skills)** — Multi-platform agent skill for EU AI Act compliance, anchored on ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090:2025 (AI cybersecurity). Runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Citation-grade — every obligation cites article + clause + Annex A control. Reference-only profile (no network, no tool calls). MIT.
+- **[ai-act-skills](https://github.com/abk1969/ai-act-skills)** — Multi-platform agent skill for EU AI Act compliance, anchored on ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (FDIS) (AI cybersecurity). Runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Citation-grade — every obligation cites article + clause + Annex A control. Reference-only profile (no network, no tool calls). MIT.
 ```
 
 ## Long entry (use if the list expects detailed descriptions)
 
 ```markdown
-- [ai-act-skills](https://github.com/abk1969/ai-act-skills) - Multi-platform agent skill running natively on Claude Code, Gemini CLI, and OpenAI Codex. Strict ISO/IEC 42001:2023 (AIMS) + 27090:2025 (AI cybersecurity) anchoring — never ISO 27001 as primary AI framework. Citation-grade: every obligation cites article + clause + Annex A control (e.g., art. 9(2)(a) → cl. 6.1.4 + A.5.4). 15 reference files covering risk classification, FRIA (art. 27), Annex IV, post-market, GPAI, sandboxes, AI literacy (art. 4). Machine-readable SSL manifest per arXiv:2604.24026. Reference-only — no network, no credentials, no tool calls. MIT.
+- [ai-act-skills](https://github.com/abk1969/ai-act-skills) - Multi-platform agent skill running natively on Claude Code, Gemini CLI, and OpenAI Codex. Strict ISO/IEC 42001:2023 (AIMS) + 27090 (FDIS, AI cybersecurity) anchoring — never ISO 27001 as primary AI framework. Citation-grade: every obligation cites article + clause + Annex A control (e.g., art. 9(2)(a) → cl. 6.1.4 + A.5.4). 15 reference files covering risk classification, FRIA (art. 27), Annex IV, post-market, GPAI, sandboxes, AI literacy (art. 4). Machine-readable SSL manifest per arXiv:2604.24026. Reference-only — no network, no credentials, no tool calls. MIT.
 ```
 
 ## Short entry (badge-style for tighter lists)

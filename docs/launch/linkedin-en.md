@@ -27,7 +27,7 @@ Penalties: €35M or 7% of global revenue.
 The right anchor is NOT ISO 27001 (generic ISMS). It's:
 
 → ISO/IEC 42001:2023 — the certifiable AI Management System
-→ ISO/IEC 27090:2025 — AI-specific cybersecurity
+→ ISO/IEC 27090 (FDIS) — AI-specific cybersecurity
 → EN ISO 42001/27090 (CEN-CENELEC JTC 21) — the future art. 40
    presumption-of-conformity path
 
