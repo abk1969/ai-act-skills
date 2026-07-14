@@ -10,7 +10,7 @@
 | `entry` | [`SKILL.md`](./SKILL.md) |
 | `manifest` | [`ssl.json`](./ssl.json) (SSL-1.0, arXiv:2604.24026) |
 | `activation_tool` | `activate_skill` |
-| `version` | 1.2.0 |
+| `version` | 2.0.0 |
 | `license` | MIT |
 | `repository` | <https://github.com/abk1969/ai-act-skills> |
 | `permission` | `filesystem.read` (own reference files only) |

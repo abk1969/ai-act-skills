@@ -53,6 +53,7 @@
       "art-57-sandbox",
       "art-60-real-world-testing",
       "art-73-incident",
+      "ai-omnibus",
       "compliance",
       "governance",
       "decision-support"
@@ -71,7 +72,8 @@
       "Map AI Act art. 15 cybersecurity to ISO/IEC 27090",
       "Which Annex III domain covers credit scoring?",
       "How do I mark AI-generated content under art. 50?",
-      "What are the sanctions for art. 5 violations?"
+      "What are the sanctions for art. 5 violations?",
+      "Did the AI Omnibus change my compliance deadline?"
     ],
     "control_flow_features": {
       "has_branch": true,

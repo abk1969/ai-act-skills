@@ -15,7 +15,7 @@ A given product can be both a high-risk AI system *and* built on a GPAI model: b
 
 Banned outright. Placing on market or putting into service triggers **tier-1 sanctions: €35M or 7% of global annual turnover**, whichever is higher (art. 99(3)). In application since **2025-02-02** (six months after entry into force).
 
-Eight categories (art. 5(1)(a)–(h)):
+Nine categories — art. 5(1)(a)–(h) as of the original text, plus the NCII/CSAM prohibition added by the 2026 AI Omnibus:
 
 | # | Practice | Carve-outs |
 |---|----------|-----------|
@@ -27,6 +27,7 @@ Eight categories (art. 5(1)(a)–(h)):
 | (f) | **Emotion recognition** in **workplace** and **education** contexts | Carve-outs: medical or safety reasons (e.g., fatigue detection in pilots/drivers) |
 | (g) | **Biometric categorisation** that infers race, political opinions, trade union membership, religious or philosophical beliefs, sex life, sexual orientation | Carve-out: lawful labelling/filtering of lawfully acquired datasets, in the area of law enforcement |
 | (h) | **Real-time remote biometric identification** in publicly accessible spaces by law enforcement | Narrow carve-outs (art. 5(2)–(4)): targeted search for specific victims, prevention of imminent threat, identification of suspect of serious crime — all subject to prior judicial/administrative authorisation and Member State enabling law |
+| — | **Generation/manipulation of non-consensual intimate imagery (NCII) or child sexual abuse material (CSAM)** — added by the 2026 AI Omnibus. Extends to systems where such generation is "a reasonably foreseeable and reproducible outcome, without requiring significant technical modification" | Applicable **2026-12-02** (transitional period for implementing technical safeguards: refusal training, output controls, content filtering) |
 
 **Common misclassification**: assuming an "AI ethics" violation = unacceptable. It does not. Art. 5 has narrow, specific triggers. A biased recruitment tool is **high-risk** (Annex III §4), not prohibited. A chatbot that manipulates is prohibited only if it "materially distorts behaviour" via subliminal/deceptive techniques causing significant harm — a high bar.
 
@@ -55,9 +56,11 @@ Annex I lists ~20 product regulations including:
 - Marine equipment Directive 2014/90/EU
 - Rail interoperability Directive (EU) 2016/797
 
-**Annex I high-risk obligations apply from 2027-08-02** (art. 113(c)) — one year after the rest of high-risk regime.
+**Annex I high-risk obligations apply from 2028-08-02** (art. 113(c) as deferred by the 2026 AI Omnibus; originally 2027-08-02). The Omnibus also largely carves AI embedded in **Machinery Regulation** products out of the dedicated high-risk regime and narrows the "safety component" definition to exclude non-safety assistance and optimization functions.
 
 #### Pathway B: art. 6(2) — Annex III use cases
+
+**Annex III high-risk obligations apply from 2027-12-02** (deferred by the 2026 AI Omnibus from 2026-08-02, as a fixed date). Draft Commission classification guidelines under art. 6(5) were published **2026-05-19**.
 
 The AI system is intended for one of the eight Annex III domains:
 
@@ -103,7 +106,7 @@ Four categories trigger art. 50:
 
 **Carve-outs**: art. 50(2)–(4) provide narrow exceptions for (a) law enforcement use, (b) artistic/satirical/fictional works (deep fake disclosure may be done in a way that doesn't impair display/enjoyment), (c) where authorised by law for public-interest purposes.
 
-In application from **2026-08-02**.
+In application from **2026-08-02** (unchanged by the AI Omnibus). One Omnibus adjustment: generative systems already on the market before 2026-08-02 get a grace period for the art. 50(2) machine-readable marking requirement, until **2026-12-02**.
 
 ### 1.4 Minimal risk
 
@@ -133,10 +136,11 @@ Adapted from the codified logic in `assessmentService.ts`. Use as a structured i
 ### Decision logic (informal)
 
 ```
-If any art. 5(1)(a)–(h) trigger fires, AND no carve-out, AND not eligible for art. 5(2)–(4) law-enforcement exception:
+If any art. 5 trigger fires (incl. the Omnibus NCII/CSAM prohibition, applicable 2026-12-02),
+AND no carve-out, AND not eligible for art. 5(2)–(4) law-enforcement exception:
     → UNACCEPTABLE. Stop. Do not place on market.
 Else if Annex I product + third-party conformity assessment required (Pathway A):
-    → HIGH-RISK (effective 2027-08-02).
+    → HIGH-RISK (effective 2028-08-02, post-Omnibus).
 Else if Annex III §1–§8 use-case match (Pathway B):
     If profiling of natural persons:
         → HIGH-RISK (no derogation).
@@ -210,7 +214,7 @@ ANNEX III DOMAIN: <§1 biometrics | §2 critical infra | ... | §8 justice/democ
 ART. 6(3) DEROGATION: <claimed: (a)/(b)/(c)/(d) | not eligible | profiles natural persons → unavailable>
 ART. 50 TRIGGERS: <chatbot | generative content | emotion/biometric cat | deepfake | AI-public-text | none>
 GPAI REGIME: <not GPAI | GPAI standard | GPAI systemic risk>
-EFFECTIVE DATE: <2025-02-02 | 2025-08-02 | 2026-08-02 | 2027-08-02>
+EFFECTIVE DATE: <2025-02-02 | 2025-08-02 | 2026-08-02 | 2026-12-02 | 2027-12-02 | 2028-08-02 (post-Omnibus)>
 RATIONALE: <2-3 sentences citing art./Annex/§ that triggered classification>
 KEY UNCERTAINTIES: <list, e.g., "depends on whether decision is materially influenced — see art. 6(3)(c)">
 NEXT STEPS: <e.g., "If high-risk: read 02-high-risk-obligations.md and 03-iso-42001-aims.md; conduct FRIA per 07-fria-art27.md if deployer">

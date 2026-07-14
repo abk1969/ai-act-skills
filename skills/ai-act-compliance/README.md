@@ -176,7 +176,7 @@ This skill is built to be **operational and rigorous**, not introductory. It ass
 - Working knowledge of management-system standards (Annex SL HLS, Statement of Applicability, internal audit)
 - Access to authoritative source documents when binding interpretation is needed (the regulation itself, ISO standards, Commission acts)
 
-Every claim cites the specific article, clause, or control number. Where the standard is silent or under development (e.g., harmonised-standard OJEU citations as of early 2026), the skill says so explicitly.
+Every claim cites the specific article, clause, or control number. Where the standard is silent or under development (e.g., harmonised-standard OJEU citations as of July 2026), the skill says so explicitly.
 
 ## Limitations & legal notice
 
@@ -199,9 +199,11 @@ The author is not responsible for compliance decisions made on the basis of this
 
 ## Standards tracked
 
-| Standard | Status (as of April 2026) | Role in this skill |
+| Standard | Status (as of July 2026) | Role in this skill |
 |----------|---------------------------|--------------------|
-| Regulation (EU) 2024/1689 (AI Act) | In force; full application 2026-08-02 | Primary source |
+| Regulation (EU) 2024/1689 (AI Act) | In force; amended by the 2026 AI Omnibus (Annex III high-risk 2027-12-02, Annex I 2028-08-02; OJ publication pending as of 2026-07-14) | Primary source |
+| 2026 AI Omnibus amendment | Adopted (Parliament 2026-06-16, Council 2026-06-29); OJ publication expected July 2026 | Timeline + art. 5 amendment source |
+| GPAI Code of Practice (art. 56) | Published 2025-07-10; adequacy confirmed 2025-08-01 | Operative GPAI compliance instrument |
 | ISO/IEC 42001:2023 | Published; certifiable | Primary AIMS standard |
 | ISO/IEC 27090:2025 | Published; informative | Primary AI security standard |
 | ISO/IEC 23894:2023 | Published; informative | AI risk management depth |
@@ -218,10 +220,11 @@ The author is not responsible for compliance decisions made on the basis of this
 
 ## Versioning
 
-This skill version: **1.2.0**
+This skill version: **2.0.0**
 
 Changelog:
 
+- **2.0.0** — Regulatory content update to the post-Omnibus AI Act: 2026 AI Omnibus amendment (Annex III high-risk deferred to 2027-12-02, Annex I to 2028-08-02, new art. 5 NCII/CSAM prohibition applicable 2026-12-02, art. 50(2) marking grace period, sandboxes deferred to 2027-08-02, machinery carve-out, art. 4 wording softened); GPAI Code of Practice operative status (published 2025-07-10, three chapters, adequacy 2025-08-01) + Commission GPAI guidelines and training-data-summary template; JTC 21 harmonised-standards acceleration (prEN 18228 / prEN 18284, Q4 2026); Commission draft guidance landed (art. 6 classification 2026-05-19; art. 73 incident reporting + template 2025-09-26). Major bump per versioning legend (AI Act amendment).
 - **1.2.0** — Multi-platform compatibility: native support for Claude Code, Gemini CLI, and OpenAI Codex via host-specific discovery files (`AGENTS.md`, `GEMINI.md`) at root + skill level. New `references/15-platform-compatibility.md` documents the activation matrix. `package.json` declares `platforms` and per-platform install paths. Skill content (regulatory expertise, ISO anchors) unchanged — only discovery and packaging extended.
 - **1.1.0** — SSL representation added (`ssl.json`); SKILL.md restructured into 7 typed SSL scenes; description tightened per writing-skills CSO rules; 4 new reference files added (art. 4 AI literacy, art. 25 substantial modification, art. 57–63 sandboxes & real-world testing, art. 56/95/86 codes & right to explanation).
 - **1.0.0** — Initial release.

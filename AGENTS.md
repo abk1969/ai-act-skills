@@ -64,7 +64,7 @@ companion skills (e.g., `example-skills:docx`) outside this repository.
 
 ## Versioning & contributing
 
-- Current skill version: **1.2.0** (see
+- Current skill version: **2.0.0** (see
   [`CHANGELOG.md`](./CHANGELOG.md))
 - Repository: <https://github.com/abk1969/ai-act-skills>
 - Issues: <https://github.com/abk1969/ai-act-skills/issues>

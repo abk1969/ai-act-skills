@@ -11,7 +11,7 @@ The AI Act provides **two pre-market controlled-experimentation regimes** that h
 
 ### 1.1 Art. 57 — Establishment
 
-Each Member State **shall establish at least one regulatory sandbox at national level** by **2026-08-02** (art. 57(1) + art. 113). Sandboxes may be set up jointly with one or several other Member States, regional, or local. Joint sandboxes coordinated via the AI Office.
+Each Member State **shall establish at least one regulatory sandbox at national level** by **2027-08-02** (art. 57(1) + art. 113 — deferred by the 2026 AI Omnibus from 2026-08-02; the Omnibus also expanded EU-level sandbox access). Sandboxes may be set up jointly with one or several other Member States, regional, or local. Joint sandboxes coordinated via the AI Office. Member States may open sandboxes earlier — check national availability.
 
 **Operator**: Member State competent authority + Data Protection Authority (DPA) + other relevant national authorities. Multi-disciplinary by design.
 
@@ -186,7 +186,7 @@ NEXT STEPS
 
 CITATIONS
   - AI Act art. 57, 58, 59, 60, 61, 62, 63
-  - AI Act art. 113 (sandbox availability deadline 2026-08-02)
+  - AI Act art. 113 (sandbox availability deadline 2027-08-02, post-Omnibus)
   - ISO/IEC 42001:2023 cl. 6.1.4, 8.1–8.4, 9.1; Annex A.5.2, A.6.2.4, A.6.2.6, A.8.4, A.8.5
   - ISO/IEC 42005:2025 (impact assessment)
 

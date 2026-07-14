@@ -67,7 +67,7 @@ In addition to standard GPAI obligations, providers of GPAI models with systemic
 
 The AI Office shall encourage and facilitate the drawing up of **codes of practice** at Union level in order to contribute to the proper application of the Regulation, taking into account international approaches. Adherence to a code of practice approved by the Commission may be relied upon to **demonstrate compliance** with arts. 53–55.
 
-The **Code of Practice for GPAI** has been developed under the AI Office (drafting concluded 2025; iterations ongoing). It is the **operative compliance instrument** for arts. 53–55 in 2026.
+The **GPAI Code of Practice** was published in final form on **2025-07-10**, structured in three chapters: **Transparency** and **Copyright** (all GPAI providers, art. 53) and **Safety & Security** (systemic-risk providers, art. 55). The Commission and AI Board confirmed its **adequacy** on **2025-08-01**. It is the **operative compliance instrument** for arts. 53–55. Companion Commission instruments: **GPAI guidelines** clarifying the scope of provider obligations (2025-07-18) and the **training-data-summary template** for art. 53(1)(d) (2025-07-24). Commission enforcement powers, including art. 101 fines, apply from **2026-08-02**.
 
 ### 1.7 ISO 42001 + 27090 alignment for GPAI
 
@@ -117,24 +117,27 @@ When deciding on the amount of fines, in each individual case, all relevant circ
 
 Without prejudice to administrative fines under (3)–(6), national competent authorities may impose periodic penalty payments to compel providers, deployers or notified bodies to respect their obligations.
 
-## 3. Application timeline — art. 113
+## 3. Application timeline — art. 113, as amended by the 2026 AI Omnibus
 
-Staged application of the AI Act over 36 months from entry into force.
+> **AI Omnibus status (as of 2026-07-14)**: adopted (Parliament 2026-06-16; Council 2026-06-29); OJ publication expected July 2026, entry into force on the third day after publication. Until then the original art. 113 dates remain the formal baseline — **verify the OJEU**. The Omnibus set **fixed** deferred dates (the Commission's proposed standards-linked conditional trigger was dropped).
 
 | Date | What enters into application |
 |------|------------------------------|
 | **2024-07-12** | OJ publication |
 | **2024-08-01** | **Entry into force** (art. 113(1)) — 20 days after publication |
-| **2025-02-02** | Chapter I (subject matter, scope, definitions) + **Chapter II (art. 5 prohibitions)** apply |
+| **2025-02-02** | Chapter I (subject matter, scope, definitions) + **Chapter II (art. 5 prohibitions)** + art. 4 AI literacy apply |
 | **2025-08-02** | Chapter III Section 4 (notifying authorities + notified bodies) + Chapter V (GPAI) + Chapter VII (governance) + Chapter XII (penalties — except art. 101 GPAI penalties) + art. 78 (confidentiality) apply |
-| **2026-08-02** | **Full application** of remaining articles — most importantly the high-risk obligations (Chapter III Sections 1–3 except already-applied bits), high-risk transparency (art. 50), conformity assessment (arts. 40–49) |
-| **2027-08-02** | Art. 6(1) (Annex I product-safety pathway) + corresponding obligations — high-risk under Annex I product legislation (machinery, MDR, IVDR, automotive, civil aviation, etc.) |
+| **2026-08-02** | **Art. 50 transparency** + art. 95 codes + remaining non-high-risk provisions + **Commission GPAI enforcement (art. 101 fines)**. High-risk obligations deferred by the Omnibus (below) |
+| **2026-12-02** | New **art. 5 NCII/CSAM prohibition** (Omnibus) applicable; end of art. 50(2) marking grace period for generative systems on market before 2026-08-02 |
+| **2027-08-02** | Member State **regulatory sandboxes** operational (art. 57, deferred from 2026-08-02); GPAI models placed on market before 2025-08-02 must comply with arts. 53–55 (art. 111) |
+| **2027-12-02** | **High-risk obligations for stand-alone Annex III systems** (deferred from 2026-08-02) — Chapter III Sections 1–3, conformity assessment (arts. 40–49), registration |
+| **2028-08-02** | Art. 6(1) (Annex I product-safety pathway) + corresponding obligations (deferred from 2027-08-02) — MDR, IVDR, automotive, civil aviation, etc.; machinery largely carved out by the Omnibus |
 
 ### 3.1 Transitional provisions (art. 111)
 
 - **GPAI models placed on the market before 2025-08-02**: providers shall **comply with art. 53–55 by 2027-08-02** (2-year transition for GPAI placed on market before GPAI obligations applied).
-- **High-risk AI systems placed on market before 2026-08-02** (operators of which expect substantial changes after that date): subject to obligations from the date of substantial change.
-- **High-risk AI systems intended for use by public authorities**: full conformity must be achieved by **2030-12-31** if placed on market before 2026-08-02.
+- **High-risk AI systems placed on market before the (deferred) high-risk application date** and whose operators expect substantial changes after that date: subject to obligations from the date of substantial change.
+- **High-risk AI systems intended for use by public authorities**: full conformity must be achieved by **2030-12-31** if placed on market before the high-risk application date.
 
 ### 3.2 Practical implementation roadmap
 
@@ -151,6 +154,13 @@ Staged application of the AI Act over 36 months from entry into force.
   - For systemic-risk GPAI: implement art. 55 (red teaming, security, incident reporting)
 
 2025-08-02 → 2026-08-02 (12 months)
+  - Establish art. 50 transparency UX (chatbot disclosure, content marking) — due 2026-08-02
+  - GPAI providers: close any gap before Commission enforcement (art. 101) starts 2026-08-02
+  - Begin high-risk implementation (arts. 9–15) — deadline moved to 2027-12-02 but the runway is needed
+
+2026-08-02 → 2027-12-02 (16 months — high-risk runway, post-Omnibus)
+  - Implement NCII/CSAM technical safeguards by 2026-12-02 (new art. 5 prohibition)
+  - Complete art. 50(2) machine-readable marking for pre-2026-08-02 generative systems by 2026-12-02
   - For high-risk AI systems: implement arts. 9–15 essential requirements
   - Establish QMS per art. 17 (ideally certify to ISO 42001)
   - Draft Annex IV technical documentation
@@ -159,16 +169,15 @@ Staged application of the AI Act over 36 months from entry into force.
   - Issue declaration of conformity (art. 47), affix CE marking (art. 48)
   - Register in EU database (art. 49)
   - For deployers: prepare FRIA (art. 27); set up art. 26 oversight + monitoring
-  - Establish art. 50 transparency UX
   - Establish post-market monitoring (art. 72) + serious-incident reporting (art. 73)
+  - Track JTC 21 OJEU citations (key ENs expected from Q4 2026) → claim art. 40 presumption when available
 
-2026-08-02 → 2027-08-02 (12 months — buffer period)
-  - Full operational maturity of AIMS
+2027-12-02 → 2028-08-02 (8 months)
+  - Annex III high-risk regime live: maintain full conformity
   - First internal audit + management review (ISO 42001 cl. 9.2-3)
-  - Continuous improvement (ISO 42001 cl. 10)
-  - Track JTC 21 OJEU citations of harmonised standards → claim art. 40 presumption when available
+  - Annex I product-embedded AI: final conformity push
 
-2027-08-02 onwards
+2028-08-02 onwards
   - Annex I product-safety high-risk: full obligations apply
   - Continuous compliance maintenance
   - Track Commission delegated/implementing acts (esp. arts. 6, 7, 41, 51, 52, 96)
@@ -176,7 +185,16 @@ Staged application of the AI Act over 36 months from entry into force.
 
 ### 3.3 Key Commission acts to track
 
-- **Art. 6(7)** — Commission guidelines on practical implementation of art. 6(1)/(2) classification
+Landed so far:
+
+- **GPAI guidelines** (2025-07-18) — scope of provider obligations under Chapter V
+- **Training-data-summary template** (2025-07-24) — operationalizes art. 53(1)(d)
+- **Draft art. 73 serious-incident guidance + reporting template** (2025-09-26; consultation closed 2025-11-07)
+- **Draft art. 6 high-risk classification guidelines** (2026-05-19)
+
+Still pending:
+
+- **Art. 6(7)** — final Commission guidelines on practical implementation of art. 6(1)/(2) classification
 - **Art. 7** — delegated acts adding new use cases to Annex III
 - **Art. 11(3)** — Commission implementing act for SME simplified Annex IV form
 - **Art. 27(5)** — Commission template for FRIA notification
@@ -215,16 +233,19 @@ Tier 3 (false info to authorities):    €7.5M or 1%
 GPAI (art. 101):                       €15M or 3%
 SME cap:                               LOWER of fixed or %
 
-═══ TIMELINE ═══
-2025-02-02: art. 5 prohibitions
+═══ TIMELINE (post-Omnibus 2026) ═══
+2025-02-02: art. 5 prohibitions + art. 4 literacy
 2025-08-02: GPAI (Chapter V), governance, penalties (most)
-2026-08-02: FULL APPLICATION (high-risk Chapter III, art. 50, conformity, registration, PMM, incident reporting)
-2027-08-02: Annex I product-safety high-risk
+2026-08-02: art. 50 transparency + GPAI enforcement (art. 101 fines)
+2026-12-02: NCII/CSAM prohibition + end of art. 50(2) marking grace
+2027-08-02: sandboxes operational; legacy GPAI compliance deadline
+2027-12-02: ANNEX III HIGH-RISK (Chapter III, conformity, registration, PMM, incident reporting)
+2028-08-02: Annex I product-safety high-risk
 
 ═══ TRANSITIONAL ═══
-GPAI on market before 2025-08-02:                comply by 2027-08-02
-High-risk on market before 2026-08-02:           obligations on substantial change
-Public-authority high-risk on market before 2026-08-02: full conformity by 2030-12-31
+GPAI on market before 2025-08-02:                     comply by 2027-08-02
+High-risk on market before the high-risk date:        obligations on substantial change
+Public-authority high-risk placed before that date:   full conformity by 2030-12-31
 ```
 
 ## 5. Anti-patterns and pitfalls
@@ -235,9 +256,9 @@ Public-authority high-risk on market before 2026-08-02: full conformity by 2030-
 
 3. **Compute-threshold complacency.** 10²⁵ FLOPs is the **presumption** trigger; the Commission can designate a model as systemic-risk **regardless** of compute via art. 51(1)(b). Don't rely solely on compute audit.
 
-4. **Late start on 2026-08-02 obligations.** A 12-month implementation runway is **tight** for organizations starting from zero on AIMS, technical documentation, conformity assessment. Beginning later than 2025-08-02 risks 2026-08-02 non-compliance.
+4. **Treating the Omnibus deferral as a reason to pause.** The high-risk deadline moved to 2027-12-02, but arts. 9–15 + QMS + Annex IV + conformity assessment consume that runway easily for organizations starting from zero. Meanwhile art. 50 (2026-08-02), the NCII/CSAM safeguards (2026-12-02), and GPAI enforcement (2026-08-02) arrive first.
 
-5. **Misreading the 2027-08-02 date as "general extension."** It applies **only** to Annex I product-safety pathway (art. 6(1)). Annex III (art. 6(2)) high-risk systems must be compliant by **2026-08-02**.
+5. **Misreading the 2028-08-02 date as "general extension."** It applies **only** to the Annex I product-safety pathway (art. 6(1)). Annex III (art. 6(2)) high-risk systems must be compliant by **2027-12-02**.
 
 6. **Ignoring Commission delegated/implementing acts.** Several articles depend on Commission acts to be operative (e.g., FRIA template, PMM plan format, GPAI code of practice). Track them; non-compliance can result if the act lands and the organization missed it.
 

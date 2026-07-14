@@ -200,8 +200,13 @@ Key dates from art. 113:
 - **2024-08-01** — Regulation enters into force
 - **2025-02-02** — Art. 5 prohibitions + Art. 4 AI literacy effective
 - **2025-08-02** — GPAI obligations (Chapter V) + governance + penalties
-- **2026-08-02** — Full application of high-risk regime, art. 50 transparency, art. 57 sandboxes, art. 95 codes
-- **2027-08-02** — Annex I product-safety pathway
+- **2026-08-02** — Art. 50 transparency, art. 95 codes, Commission GPAI enforcement (art. 101)
+- **2026-12-02** — New art. 5 NCII/CSAM prohibition (AI Omnibus) + end of art. 50(2) marking grace period
+- **2027-08-02** — Regulatory sandboxes operational (deferred by the AI Omnibus)
+- **2027-12-02** — High-risk regime for stand-alone Annex III systems (deferred by the AI Omnibus from 2026-08-02)
+- **2028-08-02** — Annex I product-safety pathway (deferred by the AI Omnibus from 2027-08-02)
+
+> The **2026 AI Omnibus** amendment (Parliament 2026-06-16, Council 2026-06-29) set these deferred dates. OJ publication was pending as of 2026-07-14 — verify the OJEU before relying on them.
 
 ### What are the sanctions?
 
@@ -245,7 +250,7 @@ This repository uses semantic versioning:
 - **Minor**: New ISO standard publication, JTC 21 OJEU citation
 - **Patch**: Editorial corrections, structural improvements
 
-Current version: **1.2.1** — Community plumbing + SEO foundation. CONTRIBUTING, ROADMAP, SECURITY, NOTICE, 4 issue templates, FUNDING.yml. LICENSE restored to canonical MIT (disclaimer moved to NOTICE). README first-fold elevator paragraph. SKILL.md frontmatter declares agentskills.io spec optional fields. No regulatory content changed from v1.2.0.
+Current version: **2.0.0** — Regulatory content update: the **2026 AI Omnibus** amendment (deferred high-risk dates 2027-12-02 / 2028-08-02, new art. 5 NCII/CSAM prohibition, art. 50(2) grace period, sandbox deferral, machinery carve-out) + **GPAI Code of Practice** operative status (published 2025-07-10, adequacy 2025-08-01) + JTC 21 harmonised-standards status + Commission draft guidance (art. 6 classification, art. 73 incident reporting). Major bump per the versioning legend: AI Act amendment.
 
 ## Contributing
 
@@ -277,4 +282,4 @@ MIT — see [`LICENSE`](LICENSE).
 
 ---
 
-*The AI Act (Regulation (EU) 2024/1689) entered into force 2024-08-01. Article 5 prohibitions apply since 2025-02-02. Full application of high-risk obligations: 2026-08-02. Annex I product-safety pathway: 2027-08-02.*
+*The AI Act (Regulation (EU) 2024/1689) entered into force 2024-08-01. Article 5 prohibitions apply since 2025-02-02. Art. 50 transparency: 2026-08-02. High-risk obligations (Annex III): 2027-12-02 and Annex I product-safety pathway: 2028-08-02, as deferred by the 2026 AI Omnibus (OJ publication pending as of 2026-07-14).*

@@ -1,6 +1,6 @@
 # Roadmap — ai-act-skills
 
-> Living document. Last updated: 2026-05-09.
+> Living document. Last updated: 2026-07-14.
 
 This roadmap is **public and dated** so that downstream users can plan.
 The AI Act regulatory environment is in active development through
@@ -15,6 +15,24 @@ The AI Act regulatory environment is in active development through
 - **Patch** — Editorial / non-substantive
 
 ## Released
+
+### v2.0.0 — 2026-07-14 ✅ — AI Omnibus amendment + GPAI Code of Practice
+
+- **2026 AI Omnibus** encoded: Annex III high-risk deferred to
+  **2027-12-02**, Annex I to **2028-08-02** (fixed dates); new art. 5
+  **NCII/CSAM prohibition** (applicable 2026-12-02); art. 50(2) marking
+  grace period; sandboxes deferred to 2027-08-02; machinery carve-out;
+  art. 4 wording softened. OJ publication pending at release —
+  "verify OJEU" caveats throughout.
+- **GPAI Code of Practice** operative status (published 2025-07-10,
+  adequacy 2025-08-01) — this delivered the former **v2.1.0 milestone**.
+- JTC 21 status: no OJEU citation yet; prEN 18228 / prEN 18284
+  targeted Q4 2026 under the October 2025 acceleration.
+- Draft Commission guidance recorded: art. 6 classification
+  (2026-05-19), art. 73 incident reporting + template (2025-09-26).
+- Major bump per the versioning legend: AI Act amendment. The
+  harmonised-standards milestone formerly labelled v2.0.0 is
+  renumbered **v3.0.0** below.
 
 ### v1.2.0 — 2026-05-08 ✅ — Multi-platform
 
@@ -82,7 +100,12 @@ The AI Act regulatory environment is in active development through
 - [ ] Recommended deployment patterns (skill + MCP server + benchmark
       in concert)
 
-### v2.0.0 — Target: when first JTC 21 EN ISO is cited in OJEU — Harmonised standards
+### v3.0.0 — Target: when first JTC 21 EN ISO is cited in OJEU — Harmonised standards
+
+> Renumbered from v2.0.0: the major slot was consumed by the 2026 AI
+> Omnibus amendment (released as v2.0.0 above). Per the CEN-CENELEC
+> October 2025 acceleration, key deliverables (prEN 18228 risk
+> management, prEN 18284 data quality) are targeted for Q4 2026.
 
 **Triggers** (any of):
 
@@ -102,21 +125,15 @@ The AI Act regulatory environment is in active development through
 - Major bump because the regulatory anchoring shifts qualitatively
   (informative → presumption-conferring)
 
-### v2.1.0 — Target: when GPAI Code of Practice (art. 56) is published in operative form
+### ~~v2.1.0 — GPAI Code of Practice (art. 56) in operative form~~ ✅ Delivered in v2.0.0
 
-**Triggers**:
-
-- Commission publication of the operative GPAI Code of Practice
-- AI Office endorsement of specific commitments
-
-**Scope**:
-
-- Update `references/14-codes-and-right-to-explanation.md` § Code of
-  Practice
-- Add `references/14a-gpai-code-commitments.md` if the Code's
-  structure warrants its own file
-- Update obligations matrix in `references/02-high-risk-obligations.md`
-  for GPAI providers using the Code as conformity evidence
+The Code was published 2025-07-10 (three chapters) and assessed
+adequate by the Commission and AI Board on 2025-08-01. Encoded in
+`references/14-codes-and-right-to-explanation.md` and
+`references/10-gpai-and-timeline.md` as part of v2.0.0. A dedicated
+`references/14a-gpai-code-commitments.md` (measure-by-measure mapping
+of the Code's commitments to ISO 42001 controls) remains a candidate
+minor release.
 
 ## Watching (no fixed date)
 

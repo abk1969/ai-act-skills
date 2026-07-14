@@ -7,7 +7,7 @@ This is decision-support, not legal advice. Final EU AI Act conformity assessmen
 ## Quick facts
 
 - **Repository**: https://github.com/abk1969/ai-act-skills
-- **Latest release**: v1.2.1 (2026-05-09)
+- **Latest release**: v2.0.0 (2026-07-14) — 2026 AI Omnibus amendment + GPAI Code of Practice status
 - **License**: MIT
 - **Skill name**: `ai-act-compliance`
 - **Standards anchored**: Regulation (EU) 2024/1689; ISO/IEC 42001:2023; ISO/IEC 27090:2025; ISO/IEC 23894, 23053, 5338, 5259-*, 24029-1/2, 25059, 42005, 42006, TS 4213; CEN-CENELEC JTC 21 EN ISO standards (under standardization mandate M/593)
@@ -58,8 +58,11 @@ A serious EU AI Act compliance program likely uses three categories of tooling. 
 - **In force**: 2024-08-01
 - **Art. 5 prohibitions effective**: 2025-02-02
 - **Art. 4 AI literacy effective**: 2025-02-02
-- **Full application of high-risk regime**: 2026-08-02
-- **Annex I product-safety pathway**: 2027-08-02
+- **Art. 50 transparency + Commission GPAI enforcement**: 2026-08-02
+- **New art. 5 NCII/CSAM prohibition (AI Omnibus)**: 2026-12-02
+- **High-risk regime for Annex III systems**: 2027-12-02 (deferred by the 2026 AI Omnibus from 2026-08-02)
+- **Annex I product-safety pathway**: 2028-08-02 (deferred by the 2026 AI Omnibus from 2027-08-02)
+- **AI Omnibus status**: adopted (Parliament 2026-06-16, Council 2026-06-29); OJ publication pending as of 2026-07-14
 - **Sanctions tier 1**: €35M or 7% global turnover (art. 5 violations)
 - **Sanctions tier 2**: €15M or 3% global turnover (most other provisions)
 - **Sanctions tier 3**: €7.5M or 1.5% global turnover (incorrect info to authorities)

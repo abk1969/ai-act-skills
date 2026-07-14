@@ -2,7 +2,9 @@
 
 Article 50 establishes a **horizontal transparency regime** that applies regardless of risk tier — minimal, limited, or high-risk systems can all trigger art. 50 in addition to their tier-specific obligations. The article distributes obligations between **provider** (system design) and **deployer** (operational disclosure).
 
-**In application from 2026-08-02** (art. 113(b)). Tier-2 sanctions: €15M or 3% global turnover (art. 99(4)(g)).
+**In application from 2026-08-02** (art. 113(b) — unchanged by the 2026 AI Omnibus). Tier-2 sanctions: €15M or 3% global turnover (art. 99(4)(g)).
+
+**Omnibus grace period**: generative AI systems already placed on the market before 2026-08-02 get until **2026-12-02** to comply with the art. 50(2) machine-readable marking requirement. All other art. 50 obligations (chatbot disclosure, deepfake disclosure, emotion/biometric notification, public-interest text) apply from 2026-08-02 with no grace.
 
 ## 1. The four trigger families
 

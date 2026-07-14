@@ -5,6 +5,81 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] — 2026-07-14
+
+### Changed — Regulatory content: the 2026 AI Omnibus amendment
+
+The AI Act was amended by the **Digital Omnibus on AI** ("AI Omnibus"):
+political agreement 2026-05-07, European Parliament endorsement
+2026-06-16, Council final approval 2026-06-29. OJ publication was
+pending as of this release (expected July 2026; entry into force on the
+third day after publication) — every affected file carries a
+"verify the OJEU" caveat. Major bump per the versioning legend
+(AI Act amendment).
+
+Encoded changes:
+
+- **High-risk deadlines deferred (fixed dates)** — stand-alone
+  Annex III systems: 2026-08-02 → **2027-12-02**; Annex I embedded
+  systems: 2027-08-02 → **2028-08-02**. Updated in `SKILL.md`,
+  `references/01`, `02`, `10`, `11`, `15`, root `README.md`, `llms.txt`.
+- **New art. 5 prohibition** — AI generating/manipulating
+  non-consensual intimate imagery (NCII) or CSAM, including where such
+  generation is "a reasonably foreseeable and reproducible outcome,
+  without requiring significant technical modification". Applicable
+  **2026-12-02**. Ninth prohibited-practice row added to `SKILL.md`
+  and `references/01`.
+- **Art. 50 grace period** — generative systems on market before
+  2026-08-02 get until **2026-12-02** for the art. 50(2)
+  machine-readable marking; all other art. 50 obligations unchanged
+  at 2026-08-02 (`references/08`, `01`).
+- **Sandboxes deferred** — Member State sandbox deadline moved to
+  **2027-08-02**; EU-level sandbox access expanded (`references/13`).
+- **Machinery carve-out** — AI embedded in Machinery Regulation
+  products largely excluded from the dedicated high-risk regime;
+  "safety component" definition narrowed (`references/01`).
+- **Art. 4 wording softened** toward supporting staff AI-literacy
+  development; obligation, scope, and 2025-02-02 date unchanged
+  (`references/11`, `SKILL.md`).
+- **AI Office powers expanded** — exclusive competence over GPAI-based
+  systems from the same undertaking; VLOP/VLOSE systems; enhanced
+  enforcement (`references/10` context).
+- New anti-pattern #11 in `SKILL.md`: "Misreading the AI Omnibus as a
+  general pause" — art. 5, art. 4, GPAI, and art. 50 stay on their
+  original dates.
+
+### Changed — GPAI Code of Practice operative status (roadmap v2.1.0 trigger met)
+
+- Code published **2025-07-10** in three chapters (Transparency,
+  Copyright, Safety & Security); **adequacy confirmed** by Commission +
+  AI Board **2025-08-01**; Commission enforcement (art. 101 fines) from
+  **2026-08-02**. Encoded in `references/14` (new chapter table),
+  `references/10` § 1.6, `references/05`, `SKILL.md`.
+- Companion instruments recorded: Commission GPAI guidelines
+  (2025-07-18), training-data-summary template (2025-07-24).
+
+### Changed — Standards & guidance status
+
+- `references/05` § 7 presumption ladder: still **no OJEU citation**;
+  CEN-CENELEC October 2025 acceleration; key JTC 21 deliverables
+  prEN 18228 (art. 9 risk management) and prEN 18284 (art. 10 data
+  quality/governance) targeted Q4 2026. Same status in `SKILL.md`
+  anti-pattern #2.
+- Draft Commission guidance recorded: art. 6 high-risk classification
+  guidelines (2026-05-19, `references/01`, `10`); art. 73
+  serious-incident guidance + reporting template (2025-09-26,
+  `references/09`, `10`).
+
+### Changed — Packaging
+
+- `package.json`, `SKILL.md` frontmatter, `AGENTS.md`/`GEMINI.md`
+  (root + skill), `references/15`, skill `README.md`: version 2.0.0;
+  new keywords `ai-omnibus`, `digital-omnibus`.
+- `ssl.json`: new tag `ai-omnibus`; new intent signature "Did the AI
+  Omnibus change my compliance deadline?".
+- `ROADMAP.md`: v2.1.0 GPAI-CoP milestone delivered by this release;
+  harmonised-standards major milestone renumbered to v3.0.0.
+
 ## [1.2.0] — 2026-05-08
 
 ### Added — Multi-platform compatibility (Claude Code, Gemini CLI, OpenAI Codex)
@@ -193,6 +268,7 @@ byte-identical to v1.1.0.
   - `10-gpai-and-timeline.md` — GPAI arts. 51–55 + sanctions art. 99
     + timeline art. 113.
 
+[2.0.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v2.0.0
 [1.2.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.2.0
 [1.1.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.1.0
 [1.0.0]: https://github.com/abk1969/ai-act-skills/releases/tag/v1.0.0

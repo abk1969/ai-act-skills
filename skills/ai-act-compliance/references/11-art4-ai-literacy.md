@@ -6,6 +6,8 @@
 
 > *"Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used."*
 
+> **AI Omnibus note (2026)**: the Omnibus amendment softens the art. 4 wording — from *ensuring* a sufficient level of AI literacy toward **supporting** staff AI-literacy development — reinforcing proportionality. The obligation itself, its universal scope (all providers and deployers, any tier), and its 2025-02-02 applicability are unchanged. Verify the final OJ text before recalibrating an existing programme downward.
+
 Three operative elements:
 
 1. **Subjects bound**: every **provider** AND every **deployer** of an AI system. No tier carve-out. No SME carve-out (though the level-of-effort clause "to their best extent" gives proportionality).
@@ -90,7 +92,7 @@ Tie review to AIMS cl. 9.3 (management review) and cl. 10.1 (continual improveme
 1. **"It's only for high-risk AI"** — false. Art. 4 has no tier carve-out. It applies to a marketing chatbot deployer just as to a high-risk credit-scoring provider.
 2. **"It's only for deployers"** — false. Art. 4 binds **providers and deployers** alike. A foundation-model provider must train the staff who interact with the model in development and post-market monitoring.
 3. **"Sending an email satisfies it"** — implausible. The "best extent" clause is calibrated to the role; ad-hoc communication will not survive an audit for staff exercising art. 14 human oversight on Annex III systems.
-4. **"It's a soft obligation"** — no. It carries tier-2 sanctions. It is also one of the **first** articles a market surveillance authority can enforce since it has been in force since 2025-02-02 — well before the bulk of high-risk obligations (2026-08-02).
+4. **"It's a soft obligation"** — no. It carries tier-2 sanctions. It is also one of the **first** articles a market surveillance authority can enforce since it has been in force since 2025-02-02 — well before the bulk of high-risk obligations (2027-12-02 post-Omnibus).
 5. **"GDPR data-protection training already covers this"** — partial. GDPR art. 39 DPO training covers personal-data processing. Art. 4 covers AI-specific operation, oversight, automation bias, and rights of affected persons. Overlap: ~30–40%. Gap is real and audit-relevant.
 
 ## 7. Output template — AI literacy programme summary

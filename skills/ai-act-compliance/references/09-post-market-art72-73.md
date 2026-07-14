@@ -2,6 +2,8 @@
 
 Articles 72 (post-market monitoring, "PMM") and 73 (serious incident reporting) anchor the **operational lifecycle** of high-risk AI systems. Both flow naturally from ISO 42001 cl. 9 (performance evaluation) and cl. 10 (improvement), and tie together the otherwise-separate compliance domains: risk management (art. 9), data governance (art. 10), accuracy/robustness/cybersecurity (art. 15), and human oversight (art. 14).
 
+> **Commission guidance status**: the Commission published **draft guidance on reporting serious incidents under art. 73, together with a draft reporting template**, on **2025-09-26** (public consultation closed 2025-11-07). Align the incident playbook below with that template; track final adoption under art. 73(7).
+
 ## 1. Post-market monitoring (art. 72)
 
 ### 1.1 What it is
@@ -16,7 +18,7 @@ In short: PMM is the **continuous-conformity loop**.
 
 Providers must draw up a **post-market monitoring plan**, which is **part of the technical documentation** referred to in Annex IV §9 (art. 72(2)).
 
-The Commission shall adopt an implementing act detailing the form and elements of the PMM plan (art. 72(3)). As of early 2026 this implementing act is in development.
+The Commission shall adopt an implementing act detailing the form and elements of the PMM plan (art. 72(3)). As of July 2026 this implementing act is still in development.
 
 The PMM plan typically contains:
 

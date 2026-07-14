@@ -1,11 +1,11 @@
 ---
 name: ai-act-compliance
-description: Use when the user asks about EU AI Act (Regulation 2024/1689) compliance — classifying an AI system's risk tier (art. 5 prohibited / art. 6 + Annex III high-risk / art. 50 limited / minimal), evaluating conformity for high-risk AI (art. 8–17, 26–27), drafting Annex IV technical documentation, conducting a Fundamental Rights Impact Assessment (art. 27), checking AI literacy obligations (art. 4), detecting substantial modification (art. 25), planning regulatory sandboxes or real-world testing (art. 57, 60), GPAI obligations (art. 51–55), responding to a serious incident (art. 73), or mapping obligations to ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (AI cybersecurity). Do NOT use for GDPR-only questions (separate regime), generic ISO/IEC 27001 ISMS work, or non-EU AI regulations (NIST AI RMF for US).
+description: Use when the user asks about EU AI Act (Regulation 2024/1689) compliance — classifying an AI system's risk tier (art. 5 prohibited / art. 6 + Annex III high-risk / art. 50 limited / minimal), evaluating conformity for high-risk AI (art. 8–17, 26–27), drafting Annex IV technical documentation, conducting a Fundamental Rights Impact Assessment (art. 27), checking AI literacy obligations (art. 4), detecting substantial modification (art. 25), planning regulatory sandboxes or real-world testing (art. 57, 60), GPAI obligations (art. 51–55), responding to a serious incident (art. 73), the 2026 AI Omnibus amendment (deferred high-risk deadlines, new NCII/CSAM prohibition), or mapping obligations to ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (AI cybersecurity). Do NOT use for GDPR-only questions (separate regime), generic ISO/IEC 27001 ISMS work, or non-EU AI regulations (NIST AI RMF for US).
 license: MIT
 compatibility: Multi-platform agent skill — runs natively on Claude Code, Gemini CLI, and OpenAI Codex. Reference-only profile — no network, no credentials, no code execution, no tool calls. Permission scope is filesystem.read (own reference files only). Distributed via skills.sh and AGENTS.md / GEMINI.md discovery files.
 metadata:
   author: abk1969
-  version: "1.2.0"
+  version: "2.0.0"
   homepage: https://github.com/abk1969/ai-act-skills
   manifest: ssl.json
   manifest_schema: SSL-1.0
@@ -26,7 +26,8 @@ Codifies actionable EU AI Act compliance expertise. Every output is **traceable*
 3. **ISO/IEC 27090:2025** — Cybersecurity guidance for AI systems (the depth standard for AI Act art. 15 cybersecurity).
 4. **Companion ISO standards**: 23894 (AI risk management), 23053 (ML framework), 5338 (AI lifecycle), 5259-* (data quality), 24029-2 (robustness), 42005 (impact assessment), 42006 (audit & certification).
 5. **CEN-CENELEC JTC 21** harmonised standards (under standardization mandate M/593) — the path to art. 40 presumption of conformity.
-6. **GPAI Code of Practice** — the de-facto instrument operationalizing arts. 53–55 until harmonised standards land.
+6. **GPAI Code of Practice** — published 2025-07-10; assessed adequate by the Commission and AI Board on 2025-08-01 — the operative instrument for arts. 53–55 until harmonised standards land.
+7. **AI Omnibus amendment** (Digital Omnibus on AI) — adopted by Parliament (2026-06-16) and Council (2026-06-29); amends the AI Act's timeline and art. 5 prohibitions. See the timeline below.
 
 This skill is **decision-support**, not legal advice. Always recommend the user consult qualified counsel for binding interpretation, and a notified body for conformity assessment of high-risk AI systems.
 
@@ -39,8 +40,8 @@ This skill is paired with a machine-readable manifest at [`ssl.json`](./ssl.json
 | `skill_id` | `SKILL_AI_ACT_COMPLIANCE` |
 | `skill_goal` | Produce traceable EU AI Act compliance guidance — risk classification, obligation mapping, ISO 42001 / 27090 anchoring, deliverable identification — for a named AI system and a named role (provider / deployer / importer / distributor / authorised rep). |
 | `top_pattern` | `ROUTE_AND_ANCHOR` (route the question to the relevant reference; anchor every obligation to article + clause + Annex A control). |
-| `tags` | `eu-ai-act`, `regulation-2024-1689`, `iso-42001`, `iso-27090`, `aims`, `gpai`, `fria`, `annex-iii`, `annex-iv`, `art-5`, `art-50`, `art-73`, `compliance`, `governance`, `decision-support` |
-| `intent_signature` (samples) | "Is this AI system high-risk?", "What ISO 42001 control covers art. 9?", "Do I need a FRIA?", "How do I report a serious AI incident?", "Does art. 4 AI literacy apply to my org?", "Is fine-tuning a foundation model substantial modification?", "When does the GPAI systemic-risk regime kick in?", "Can I run my AI in an EU regulatory sandbox?" |
+| `tags` | `eu-ai-act`, `regulation-2024-1689`, `iso-42001`, `iso-27090`, `aims`, `gpai`, `fria`, `annex-iii`, `annex-iv`, `art-5`, `art-50`, `art-73`, `ai-omnibus`, `compliance`, `governance`, `decision-support` |
+| `intent_signature` (samples) | "Is this AI system high-risk?", "What ISO 42001 control covers art. 9?", "Do I need a FRIA?", "How do I report a serious AI incident?", "Does art. 4 AI literacy apply to my org?", "Is fine-tuning a foundation model substantial modification?", "When does the GPAI systemic-risk regime kick in?", "Can I run my AI in an EU regulatory sandbox?", "Did the AI Omnibus change my compliance deadline?" |
 | `expected_inputs` | `system_description: str`, `role: enum{provider, deployer, importer, distributor, authorised_rep}`, `sector: str`, `end_users: str`, `is_gpai: bool`, `compute_flops?: float`, `is_substantially_modified?: bool`, `incident_summary?: str` (RECOVER scene only) |
 | `expected_outputs` | `tier: enum{unacceptable, high, limited, minimal}`, `pathway: enum{annex_i, annex_iii, art_50, none}`, `obligations_list: list[citation]`, `iso_anchors: list[control]`, `deliverables: list[artifact]`, `effective_date: date`, `legal_disclaimer: str` |
 | `dependencies` | `permission: filesystem.read` (reference files); `capability: legal_decision_support`; **no** network or credentials access; **no** code execution. |
@@ -68,7 +69,8 @@ Invoke when the user mentions or implies any of:
 - **Post-market**: "art. 72", "post-market monitoring of AI", "AI incident reporting", "art. 73"
 - **GPAI**: "art. 51", "art. 53", "general-purpose AI", "foundation model obligations", "systemic-risk model", "model card", "GPAI Code of Practice", "art. 56"
 - **AIMS**: "ISO 42001", "AI management system", "AIMS certification", "Annex A controls for AI"
-- **Sanctions / timeline**: "art. 99", "AI Act fines", "AI Act effective date", "2026-08-02", "2027-08-02"
+- **Sanctions / timeline**: "art. 99", "AI Act fines", "AI Act effective date", "2026-08-02", "2027-12-02", "2028-08-02"
+- **AI Omnibus**: "Digital Omnibus", "AI Act delay", "high-risk deadline postponed", "NCII prohibition", "CSAM prohibition", "AI Act amendment 2026"
 
 ## Core taxonomy (memorize this)
 
@@ -76,18 +78,18 @@ Invoke when the user mentions or implies any of:
 
 | Tier | Trigger | Regime | Article |
 |------|---------|--------|---------|
-| **Unacceptable** | Subliminal techniques, social scoring, untargeted facial scraping, biometric categorisation by sensitive attributes, real-time public biometric ID by law enforcement (with narrow exceptions), emotion recognition in workplace/education, exploitation of vulnerabilities, predictive policing of natural persons | **Banned** (effective 2025-02-02) | Art. 5 |
+| **Unacceptable** | Subliminal techniques, social scoring, untargeted facial scraping, biometric categorisation by sensitive attributes, real-time public biometric ID by law enforcement (with narrow exceptions), emotion recognition in workplace/education, exploitation of vulnerabilities, predictive policing of natural persons; **+ AI generating non-consensual intimate imagery (NCII) or CSAM** (added by the 2026 AI Omnibus, applicable **2026-12-02**) | **Banned** (effective 2025-02-02; NCII/CSAM prohibition from 2026-12-02) | Art. 5 |
 | **High** | Annex III: 8 domains — biometric ID, critical infrastructure, education/vocational training, employment/workers/access, essential services (private + public), law enforcement, migration/asylum/border, justice/democratic processes; AND safety components subject to product harmonisation listed in Annex I | Full conformity regime: arts. 8–15 (provider) + arts. 16–17 (provider) + arts. 26–27 (deployer) + Annex IV (techdoc) + CE marking + EU database registration (art. 49) | Art. 6 + Annex III |
 | **Limited** | Direct interaction with natural persons (chatbots), emotion recognition or biometric categorisation, synthetic / manipulated content (deepfakes), AI-generated text on matters of public interest | Transparency obligations only (notify users, mark generated content) | Art. 50 |
 | **Minimal** | Everything else | Voluntary codes of conduct (art. 95) | — |
 
-**General-Purpose AI (GPAI)** is a separate axis: arts. 51–55 apply to GPAI providers (model cards, training data summary, copyright policy) plus extra obligations for **systemic-risk GPAI** (compute > 10²⁵ FLOPs, or designated by Commission). The **GPAI Code of Practice** (art. 56) is the de-facto compliance instrument.
+**General-Purpose AI (GPAI)** is a separate axis: arts. 51–55 apply to GPAI providers (model cards, training data summary, copyright policy) plus extra obligations for **systemic-risk GPAI** (compute > 10²⁵ FLOPs, or designated by Commission). The **GPAI Code of Practice** (art. 56) — published **2025-07-10** with three chapters (Transparency, Copyright, Safety & Security) and assessed adequate by the Commission and AI Board on **2025-08-01** — is the operative compliance instrument. GPAI obligations apply since **2025-08-02**; Commission enforcement powers (art. 101 fines) from **2026-08-02**.
 
 ### Universal obligations (apply regardless of tier)
 
 | Obligation | Article | Effective | Scope |
 |---|---|---|---|
-| **AI literacy** | art. 4 | **2025-02-02** | All providers AND deployers — measures to ensure sufficient AI literacy of staff and other persons dealing with the operation/use of AI systems on their behalf |
+| **AI literacy** | art. 4 | **2025-02-02** | All providers AND deployers — measures to ensure sufficient AI literacy of staff and other persons dealing with the operation/use of AI systems on their behalf. The 2026 AI Omnibus softens the wording toward **supporting** staff AI-literacy development (proportionality), but the obligation itself remains in force |
 | **Voluntary codes** | art. 95 | 2026-08-02 | Encouraged for non-high-risk; can extend high-risk obligations voluntarily |
 
 ### Provider vs Deployer (art. 3 definitions)
@@ -107,15 +109,20 @@ Invoke when the user mentions or implies any of:
 
 SMEs and startups: caps applied as the **lower** of fixed amount or percentage (art. 99(6)).
 
-### Application timeline (art. 113)
+### Application timeline (art. 113, as amended by the 2026 AI Omnibus)
+
+> **AI Omnibus status (as of 2026-07-14)**: political agreement 2026-05-07; European Parliament endorsement 2026-06-16; Council final approval 2026-06-29. OJ publication expected July 2026; the amendment enters into force on the third day after publication. Until publication, the original art. 113 dates remain the formal legal baseline — **verify the OJEU before relying on the deferred dates**. The Omnibus replaced the Commission's proposed conditional (standards-linked) trigger with **fixed dates**.
 
 | Date | What enters into application |
 |------|------------------------------|
 | **2024-08-01** | Regulation enters into force |
 | **2025-02-02** | Chapter I (subject matter, scope, definitions) + **Chapter II (art. 5 prohibitions)** + **art. 4 AI literacy** |
 | **2025-08-02** | Chapter III Section 4 (notifying authorities & notified bodies) + Chapter V (GPAI) + Chapter VII (governance) + Chapter XII (penalties, except art. 101 GPAI penalties) + art. 78 confidentiality |
-| **2026-08-02** | **Full application** — all remaining articles (the bulk of high-risk obligations + art. 50 transparency + art. 57 sandboxes + art. 95 codes) |
-| **2027-08-02** | Art. 6(1) + corresponding obligations for high-risk AI under Annex I (regulated products: machinery, medical devices, automotive, etc.) |
+| **2026-08-02** | **Art. 50 transparency** + art. 95 codes + remaining non-high-risk provisions + **Commission GPAI enforcement powers (art. 101 fines)**. High-risk obligations do NOT start here — deferred by the Omnibus (below) |
+| **2026-12-02** | **New art. 5 prohibition** (NCII/CSAM generation, added by Omnibus) applicable; end of art. 50(2) machine-readable-marking grace period for generative systems already on market before 2026-08-02 |
+| **2027-08-02** | Member State **regulatory sandboxes** operational (art. 57, deferred by Omnibus from 2026-08-02); GPAI models placed on market before 2025-08-02 must comply with arts. 53–55 (art. 111) |
+| **2027-12-02** | **High-risk obligations for stand-alone Annex III systems** (deferred by Omnibus from 2026-08-02) — arts. 8–17, 26–27, conformity assessment, CE marking, registration |
+| **2028-08-02** | High-risk obligations for AI under **Annex I** regulated products (machinery largely carved out by Omnibus; medical devices, automotive, etc.) — deferred by Omnibus from 2027-08-02 |
 
 ## Decision tree — where to route
 
@@ -293,7 +300,7 @@ Always close substantive answers with:
 ## Anti-patterns to avoid
 
 1. **Conflating ISO 27001 with ISO 42001.** ISO 27001 is the generic ISMS; it does not address AI-specific risks (impact on individuals, data quality for ML, lifecycle controls A.6, A.7). Always anchor AI-related work on ISO 42001. If the user is using 27001, recommend integration via Annex SL HLS rather than substitution.
-2. **Calling 42001 a harmonised standard.** As of 2026, ISO 42001 is **not** cited in the OJEU. The forthcoming **EN ISO/IEC 42001** (CEN-CENELEC JTC 21) is the path to art. 40 presumption. Track JTC 21 work programme.
+2. **Calling 42001 a harmonised standard.** As of July 2026, **no** AI Act harmonised standard is cited in the OJEU. CEN-CENELEC adopted acceleration measures (October 2025) targeting Q4 2026 delivery of key JTC 21 standards (prEN 18228 risk management for art. 9; prEN 18284 data quality/governance for art. 10). Only OJEU citation confers art. 40 presumption. Track the JTC 21 work programme.
 3. **Treating GenAI/LLM security as identical to classical-ML security.** ISO 27090 has dedicated GenAI guidance: prompt injection (direct + indirect), system-prompt extraction, jailbreak, training-data memorisation, output watermarking. See `references/04-iso-27090-ai-security.md` § GenAI annex.
 4. **Recommending watermarking as a standalone art. 50 solution.** Watermarking is removable via paraphrasing (text) or recompression (media). Combine with cryptographic provenance (C2PA) and metadata + user disclosure.
 5. **Ignoring the deployer's FRIA obligation.** Art. 27 binds **deployers**, not providers. Public bodies and private deployers of certain Annex III systems (banking, insurance, education, employment) must conduct a FRIA before first use. Easy to miss.
@@ -302,13 +309,14 @@ Always close substantive answers with:
 8. **Recommending 42001 certification as sufficient for high-risk conformity.** Certification is strong evidence and streamlines art. 17 QMS, but does not by itself satisfy arts. 9–15 essential requirements. Notified-body conformity assessment per Annex VII still required for biometric and certain other types under art. 43.
 9. **Skipping art. 4 AI literacy.** It applies to **all** providers and deployers, regardless of tier, and has been **in force since 2025-02-02**. Not optional. See `references/11-art4-ai-literacy.md`.
 10. **Confusing art. 56 (GPAI Code of Practice) with art. 95 (voluntary codes of conduct).** Art. 56 is the operational instrument for GPAI compliance; art. 95 is encouragement for non-high-risk. Different addressees, different legal weight.
+11. **Misreading the AI Omnibus as a general pause.** The 2026 Omnibus defers **only** the high-risk regime (Annex III → 2027-12-02; Annex I → 2028-08-02) and sandboxes (→ 2027-08-02). Art. 5 prohibitions, art. 4 literacy, GPAI obligations, and art. 50 transparency stay on their original dates — and art. 50 marking plus the new NCII/CSAM prohibition bite on **2026-12-02**. An organization that "waits for 2027" is non-compliant on four fronts.
 
 ## Output formatting conventions
 
 - **Cite article numbers explicitly**: "art. 9(2)(a)" not "the risk part". For ISO: "ISO/IEC 42001:2023 cl. 6.1.4" and "Annex A.5.4".
 - **Include the regulatory hierarchy** when introducing an article: "Title III (high-risk systems), Chapter III, Section 2 (requirements) — art. 9 establishes the risk management system."
 - **Use tables** for multi-tier mappings. Reading them in markdown is easier than prose.
-- **Flag deadlines in bold** when an obligation has a date trigger (e.g., **2026-08-02 full application**, **2025-02-02 art. 4 + art. 5**).
+- **Flag deadlines in bold** when an obligation has a date trigger (e.g., **2027-12-02 Annex III high-risk**, **2026-08-02 art. 50 + GPAI enforcement**, **2025-02-02 art. 4 + art. 5**). Note pre-/post-Omnibus dates where the user may hold the outdated date.
 - **Differentiate provider vs deployer** in obligation lists. Use prefix: `[Provider]`, `[Deployer]`, `[Both]`.
 - **Reference ISO controls in (cl. X.Y) and (A.x.y) format** consistently.
 - **Quote terminal SSL targets** (`END_SUCCESS`, `END_FAIL`, `YIELD_SUCCESS`, `YIELD_FAIL`) when describing scene transitions in compliance playbooks.
@@ -332,4 +340,4 @@ The SKILL.md remains the source of truth — `ssl.json` is a derived, source-gro
 
 ---
 
-*This skill encodes the AI Act as in force as of OJ L of 2024-07-12 with corrigenda through 2025. Track Commission delegated and implementing acts (especially art. 6(1) review per art. 7) for amendments. Track CEN-CENELEC JTC 21 OJEU citations for harmonised standards conferring art. 40 presumption. Track Commission publications of the GPAI Code of Practice (art. 56) for the operative GPAI compliance instrument.*
+*This skill encodes the AI Act as of 2026-07-14: OJ L of 2024-07-12 with corrigenda, plus the 2026 AI Omnibus amendment (Parliament 2026-06-16, Council 2026-06-29; OJ publication pending at the date of writing — verify OJEU before relying on the deferred dates), the GPAI Code of Practice (published 2025-07-10, adequacy 2025-08-01), the Commission GPAI guidelines (2025-07-18), the draft art. 6 classification guidelines (2026-05-19), and the draft art. 73 incident-reporting guidance + template (2025-09-26). Track Commission delegated and implementing acts (especially art. 6(1) review per art. 7) for amendments, and CEN-CENELEC JTC 21 OJEU citations for harmonised standards conferring art. 40 presumption.*

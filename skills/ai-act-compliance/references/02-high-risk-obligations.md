@@ -2,7 +2,7 @@
 
 Once a system is classified high-risk, the full conformity regime applies. This reference is the operational manual: every essential requirement, who carries it, what artefact satisfies it, and which ISO 42001 / 27090 control operationalizes it.
 
-**Effective date** for most high-risk systems: **2026-08-02**. For Annex I product-safety high-risk: **2027-08-02**.
+**Effective date** for stand-alone Annex III high-risk systems: **2027-12-02**; for Annex I product-safety high-risk: **2028-08-02** (both deferred by the 2026 AI Omnibus from 2026-08-02 / 2027-08-02 as fixed dates — verify OJ publication of the Omnibus, expected July 2026, before relying on the deferral).
 
 ## 1. Provider essential requirements (Title III, Chapter III, Section 2 — art. 8–15)
 

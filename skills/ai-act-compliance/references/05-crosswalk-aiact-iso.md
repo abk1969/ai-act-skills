@@ -54,7 +54,7 @@ This is the **canonical mapping table** linking each AI Act obligation to its IS
 | AI Act provision | Subject | 42001 clauses | Annex A | 27090 | Companions | Coverage |
 |------------------|---------|---------------|---------|-------|-----------|----------|
 | **Art. 50** | Transparency for chatbots, generative content, deepfakes, public-interest text | cl. 7.4, 8.1 | A.8.2, A.8.4, A.8.5 | sect. 4.5 (output watermarking), sect. 6 (LLM) | C2PA spec, ISO/IEC TS 22237 (watermarking emerging) | Partial: watermarking technical needs supplementary |
-| **Art. 53** | GPAI provider obligations | cl. 4 (context), 7.5 (doc), 8 | A.4.2, A.6.2.7, A.8.2, A.8.5, A.10.3, A.10.4 | sect. 6 (foundation model annex) | **Code of Practice for GPAI** (Commission); ML-BOM | Partial — code of practice is the operative instrument |
+| **Art. 53** | GPAI provider obligations | cl. 4 (context), 7.5 (doc), 8 | A.4.2, A.6.2.7, A.8.2, A.8.5, A.10.3, A.10.4 | sect. 6 (foundation model annex) | **GPAI Code of Practice** (published 2025-07-10; adequacy 2025-08-01); training-data-summary template (2025-07-24); ML-BOM | Partial — the Code of Practice is the operative instrument |
 | **Art. 54** | Authorised reps for GPAI | cl. 4.2 | A.10.2 | — | — | Procedural |
 | **Art. 55** | Systemic-risk GPAI obligations | cl. 6.1.2, 6.1.4, 8.4, 9.1 | A.5.5 (societal), A.6.2.4 (V&V), A.6.2.6 | **All sections — esp. red teaming, supply chain** | NIST AI 100-2, MITRE ATLAS, **AI Safety Institute frameworks** | Strong on security; procedural on systemic-risk eval |
 | **Art. 61** | Conformity assessment institutional | cl. 9.2 (internal audit), 9.3 (mgmt review), 10.2 | — | — | **ISO/IEC 17021-1, ISO/IEC 42006** | Strong via 42006 |
@@ -126,10 +126,10 @@ When a high-risk provider needs to demonstrate art. 8–15 conformity, this is t
 
 What level of legal protection does each instrument confer?
 
-| Instrument | Protection conferred | Status (2026) |
+| Instrument | Protection conferred | Status (July 2026) |
 |------------|---------------------|---------------|
-| **Harmonised standard cited in OJEU** (per art. 40) | **Presumption of conformity** with corresponding essential requirements — strongest | None of the ISO standards are yet cited; tracking JTC 21 work programme |
-| **Common specifications** adopted by Commission (per art. 41) | Presumption of conformity (where used) | Not yet adopted as of early 2026 |
+| **Harmonised standard cited in OJEU** (per art. 40) | **Presumption of conformity** with corresponding essential requirements — strongest | **None cited yet.** CEN-CENELEC adopted acceleration measures (Oct 2025: direct publication after positive Enquiry vote); key JTC 21 deliverables — **prEN 18228** (risk management, art. 9), **prEN 18284** (data quality & governance, art. 10) — targeted for Q4 2026. The 2026 AI Omnibus deferred the high-risk deadline to 2027-12-02 largely because these standards were late |
+| **Common specifications** adopted by Commission (per art. 41) | Presumption of conformity (where used) | Not yet adopted as of July 2026 |
 | **EN ISO/IEC 42001 / 23894 / 5259 / 24029-2 / 42005** (forthcoming European adaptations) | Will trigger art. 40 once cited in OJEU | Drafting / adoption phase under JTC 21 |
 | **ISO/IEC 42001 certification** | **Strong evidentiary support**; **due diligence demonstration**; streamlines conformity assessment but does not by itself satisfy art. 8–15 | Available now; mature |
 | **ISO/IEC 27090, 24029-2, TS 4213, 5259, 23894, 42005 alignment** (without certification) | **Substantive evidence** that essential requirements are addressed; foundation for notified-body conformity assessment | Available now |

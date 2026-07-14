@@ -88,7 +88,7 @@ ISO/IEC 42001 Annex A controls — closing with the legal disclaimer.
 
 ## Versioning
 
-- Current skill version: **1.2.0**
+- Current skill version: **2.0.0**
 - Changelog: [`CHANGELOG.md`](./CHANGELOG.md)
 - Compatibility matrix:
   [`skills/ai-act-compliance/references/15-platform-compatibility.md`](./skills/ai-act-compliance/references/15-platform-compatibility.md)

@@ -4,9 +4,9 @@ Three distinct instruments that often get conflated. Each has a specific address
 
 | Instrument | Article | Addressee | Legal weight | When in force |
 |---|---|---|---|---|
-| **GPAI Code of Practice** | **art. 56** | GPAI providers (incl. systemic-risk) | **Operative compliance instrument** until harmonised standards land | Drafted 2024–2025; published before 2025-08-02; enforceable since 2025-08-02 |
+| **GPAI Code of Practice** | **art. 56** | GPAI providers (incl. systemic-risk) | **Operative compliance instrument** until harmonised standards land | Published **2025-07-10**; adequacy confirmed by Commission + AI Board **2025-08-01**; underlying obligations apply since 2025-08-02; Commission enforcement from 2026-08-02 |
 | **Voluntary codes of conduct** | **art. 95** | Any provider or deployer (esp. non-high-risk) | Voluntary; signals due diligence | 2026-08-02 |
-| **Right to explanation** | **art. 86** | Affected natural persons (against deployers of high-risk AI) | Mandatory; individual right | 2026-08-02 |
+| **Right to explanation** | **art. 86** | Affected natural persons (against deployers of high-risk AI) | Mandatory; individual right | 2026-08-02 — but it operates against deployers of Annex III high-risk systems, whose obligations the 2026 AI Omnibus deferred to 2027-12-02; verify the final Omnibus text for art. 86 sequencing |
 
 ## 1. GPAI Code of Practice — art. 56
 
@@ -26,6 +26,16 @@ Codes shall cover at minimum (art. 56(2)):
 
 Codes are drafted by GPAI providers + AI Office + civil society + experts. Once finalised, the Commission may by implementing act give them **general validity** at Union level (art. 56(6)).
 
+**Status**: the GPAI Code of Practice was published in final form on **2025-07-10**, structured in three chapters:
+
+| Chapter | Addressee | Operationalizes |
+|---|---|---|
+| **Transparency** | All GPAI providers | art. 53(1)(a)(b) — model documentation form for AI Office + downstream providers |
+| **Copyright** | All GPAI providers | art. 53(1)(c) — copyright policy, art. 4(3) CDSM rights-reservation compliance |
+| **Safety & Security** | Systemic-risk GPAI providers only | art. 55 — systemic-risk assessment, model evaluations, incident reporting, cybersecurity |
+
+The Commission and AI Board confirmed the Code's **adequacy** on **2025-08-01**. Signatories include the major frontier-model providers; the AI Office publishes the signatory list. Non-signatories must demonstrate compliance by alternative means (art. 56(7)) and face closer scrutiny.
+
 ### 1.2 Status as compliance evidence (art. 56(8))
 
 Adherence to a Commission-approved code of practice provides a **rebuttable presumption** that the GPAI provider complies with relevant obligations. This is the GPAI analogue of art. 40 presumption (which applies to harmonised standards for high-risk AI).
@@ -36,7 +46,7 @@ For GPAI providers without an approved code, the Commission may demand demonstra
 
 | Action | Why |
 |---|---|
-| Track Commission publication of approved codes (start with the **General-Purpose AI Code of Practice** from the AI Office) | Gives the operative compliance script |
+| Sign, or map governance against, the **GPAI Code of Practice** (published 2025-07-10, adequacy 2025-08-01) | Gives the operative compliance script |
 | Adopt the code's measures into AIMS (ISO 42001 cl. 5.2 AI policy + Annex A.2.2) | Establishes documented adherence |
 | Map code measures to ISO 42001 controls (especially A.4.2 doc, A.6.2.6 monitoring, A.8.5 info-for-parties, A.10.3 supply chain) | Generates audit-ready evidence |
 | For systemic-risk GPAI: adopt code's red-team protocol, evaluations, and post-market monitoring template | Satisfies art. 55 with rebuttable presumption |

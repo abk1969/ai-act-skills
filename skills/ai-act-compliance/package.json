@@ -1,6 +1,6 @@
 {
   "name": "ai-act-compliance",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Authoritative agent skill for EU AI Act (Regulation 2024/1689) compliance, strictly aligned with ISO/IEC 42001:2023 (AIMS) and ISO/IEC 27090 (AI cybersecurity). Multi-platform: Claude Code, Gemini CLI, OpenAI Codex. Includes machine-readable SSL manifest per Liang et al. arXiv:2604.24026.",
   "skill": {
     "name": "ai-act-compliance",
@@ -57,6 +57,8 @@
     "art-95-voluntary-codes",
     "gpai",
     "general-purpose-ai",
+    "ai-omnibus",
+    "digital-omnibus",
     "ssl-manifest",
     "scheduling-structural-logical",
     "agent-skill",
