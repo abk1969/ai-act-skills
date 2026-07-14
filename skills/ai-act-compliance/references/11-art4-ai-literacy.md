@@ -1,6 +1,6 @@
 # 11 — AI Literacy (AI Act art. 4)
 
-**Effective since 2025-02-02** (art. 113(a)). Often missed because it sits in Chapter I (general provisions) before the high-risk machinery, but it is **already enforceable** and applies **regardless of risk tier**.
+**Effective since 2025-02-02** (art. 113(a)). Often missed because it sits in Chapter I (general provisions) before the high-risk machinery, but it is **already enforceable** and applies **regardless of risk tier**. **⚠ Amended by the Digital Omnibus (adopted 2026, awaiting OJ publication) — see §1.1 below; the in-force wording still governs until publication.**
 
 ## 1. The text of art. 4
 
@@ -11,6 +11,26 @@ Three operative elements:
 1. **Subjects bound**: every **provider** AND every **deployer** of an AI system. No tier carve-out. No SME carve-out (though the level-of-effort clause "to their best extent" gives proportionality).
 2. **Population covered**: own staff **and** "other persons dealing with the operation and use of AI systems on their behalf" — contractors, gig workers, third-party operators with delegated access.
 3. **Calibration parameters** (art. 4 explicitly listed): technical knowledge, experience, education, training, **context of use**, and **persons or groups affected**.
+
+### 1.1 Update — Digital Omnibus amendment to art. 4 (adopted 2026; awaiting OJ)
+
+Art. 4 has been **amended** by the *Digital Omnibus on AI* (Commission proposal COM(2025) 836, 19 Nov 2025). The amendment was **adopted** by the European Parliament (16 Jun 2026, doc. P10_TA(2026)0198) and by the Council (29 Jun 2026), but is **not yet published in the Official Journal** (expected before 2026-08-02). Until publication, the §1 wording above remains the **in-force (lex lata)** text. The adopted replacement art. 4(1) reads:
+
+> *“Providers and deployers of AI systems shall take measures to support the development of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used. This obligation does not require providers or deployers to guarantee any specific level of AI literacy of any individual.”*
+
+(A new art. 4(3) adds that the European AI Board “shall adopt recommendations … to support the Commission and Member States in the promotion of AI literacy”.)
+
+**What changes:**
+
+1. **“ensure … a sufficient level” → “support the development of”** — the obligation shifts from outcome-oriented (obligation of result) to an **obligation of means/effort**; the amended text expressly does **not** require guaranteeing any specific literacy level.
+2. The verb stays **“shall”** (imperative) — not a soft “should”.
+3. **Providers and deployers remain the duty-bearers.** The Commission's proposal had moved the duty to the Commission/Member States; the co-legislators restored it on providers/deployers and gave the Commission/Member States a **supporting** role (new paras 2–3).
+
+This narrows misinterpretation #4 below: once in force, the “guarantee a level” reading is expressly excluded, but a mandatory best-efforts duty remains, still under tier-2 sanctions.
+
+**Until OJ publication, apply the §1 in-force text.** Confirm the final wording — and the Regulation's number and date — against the OJ once published.
+
+*Source: P10_TA(2026)0198 (European Parliament adopted text, 16 Jun 2026); Council press release, 29 Jun 2026.*
 
 ## 2. Definition of "AI literacy" (art. 3(56))
 
