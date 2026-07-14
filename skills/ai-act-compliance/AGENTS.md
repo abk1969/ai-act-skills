@@ -11,7 +11,7 @@
 | `skill_id` | `ai-act-compliance` |
 | `entry` | [`SKILL.md`](./SKILL.md) |
 | `manifest` | [`ssl.json`](./ssl.json) (SSL-1.0, arXiv:2604.24026) |
-| `version` | 2.0.0 |
+| `version` | 2.0.1 |
 | `license` | MIT |
 | `repository` | <https://github.com/abk1969/ai-act-skills> |
 | `permission` | `filesystem.read` (own reference files only) |

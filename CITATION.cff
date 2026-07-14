@@ -59,7 +59,7 @@ references:
       name: International Organization for Standardization
 
   - type: standard
-    title: "ISO/IEC 27090:2025 Cybersecurity — Artificial intelligence — Guidance for addressing security threats to artificial intelligence systems"
+    title: "ISO/IEC 27090 (FDIS) Cybersecurity — Artificial intelligence — Guidance for addressing security threats to artificial intelligence systems"
     year: 2025
     url: "https://www.iso.org/standard/56581.html"
     institution:

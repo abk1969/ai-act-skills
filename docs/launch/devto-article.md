@@ -16,7 +16,7 @@ series: AI Act compliance
 
 # Stop putting your AI on ISO 27001 — and the multi-platform agent skill I built to fix it
 
-> **TL;DR** — Most EU AI Act compliance work anchors on the wrong ISO standard. ISO/IEC 27001 is the generic Information Security Management System; it doesn't cover AI-specific clauses or controls. The correct anchors are **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090:2025** (AI cybersecurity). I codified the AI Act + ISO 42001/27090 mapping into an open-source agent skill that runs natively on **Claude Code, Gemini CLI, and OpenAI Codex** — same content, three runtimes, zero tool-call lock-in. Repo: [github.com/abk1969/ai-act-skills](https://github.com/abk1969/ai-act-skills)
+> **TL;DR** — Most EU AI Act compliance work anchors on the wrong ISO standard. ISO/IEC 27001 is the generic Information Security Management System; it doesn't cover AI-specific clauses or controls. The correct anchors are **ISO/IEC 42001:2023** (AI Management System) and **ISO/IEC 27090 (FDIS)** (AI cybersecurity). I codified the AI Act + ISO 42001/27090 mapping into an open-source agent skill that runs natively on **Claude Code, Gemini CLI, and OpenAI Codex** — same content, three runtimes, zero tool-call lock-in. Repo: [github.com/abk1969/ai-act-skills](https://github.com/abk1969/ai-act-skills)
 
 ---
 
@@ -55,7 +55,7 @@ Here's what 27001 doesn't cover that the AI Act explicitly requires:
 |---|---|---|
 | AI risk management system (art. 9) | Generic risk only | **ISO 42001 cl. 6.1.2** + **ISO 23894** (AI risk depth) |
 | Data quality and governance for AI training (art. 10) | Generic data security | **ISO 42001 cl. 7.4** + **ISO/IEC 5259-1 to -5** |
-| AI cybersecurity threats — data poisoning, model evasion, prompt injection (art. 15) | Generic infosec | **ISO/IEC 27090:2025** (purpose-built) |
+| AI cybersecurity threats — data poisoning, model evasion, prompt injection (art. 15) | Generic infosec | **ISO/IEC 27090 (FDIS)** (purpose-built) |
 | AI system impact assessment (art. 27 FRIA) | Not at all | **ISO 42001 cl. 6.1.4** + **ISO 42005:2025** |
 | AI-specific transparency to users (art. 13, art. 50) | Generic | **ISO 42001 A.8** |
 | AI lifecycle controls (training, deployment, decommissioning) | Generic | **ISO 42001 A.6** + **ISO/IEC 5338:2023** |
@@ -87,7 +87,7 @@ None of those map cleanly to ISO 27001 Annex A. They're new.
 
 ### What ISO 27090 adds — the cybersecurity depth
 
-[ISO/IEC 27090:2025](https://www.iso.org/standard/56581.html) — published 2025 — is the **AI-specific cybersecurity** depth standard. Its threat taxonomy maps directly to **AI Act art. 15(5) Recital 76**:
+[ISO/IEC 27090 (FDIS)](https://www.iso.org/standard/56581.html) — published 2025 — is the **AI-specific cybersecurity** depth standard. Its threat taxonomy maps directly to **AI Act art. 15(5) Recital 76**:
 
 | AI Act named threat | ISO 27090 coverage |
 |---|---|

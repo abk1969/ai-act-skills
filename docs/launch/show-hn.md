@@ -43,7 +43,7 @@ monitoring (art. 72-73), GPAI (art. 51-55), regulatory sandboxes (art.
 57-63), AI literacy (art. 4 — already in force since Feb 2, 2025).
 
 The unusual choice: it's anchored on ISO/IEC 42001:2023 (AIMS) and
-27090:2025 (AI cybersecurity), not ISO 27001 (the generic ISMS most
+27090 (FDIS, AI cybersecurity), not ISO 27001 (the generic ISMS most
 compliance work defaults to). 27001 is a useful baseline but it
 doesn't cover AI-specific clauses (cl. 6.1.4 impact assessment) or
 Annex A controls (A.5–A.10) that 42001 introduces.

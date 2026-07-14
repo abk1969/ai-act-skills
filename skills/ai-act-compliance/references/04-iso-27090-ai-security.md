@@ -1,12 +1,12 @@
-# 04 — ISO/IEC 27090:2025 (AI Cybersecurity) Deep Reference
+# 04 — ISO/IEC 27090 (FDIS) — AI Cybersecurity Deep Reference
 
-ISO/IEC 27090:2025 *Cybersecurity — Artificial intelligence — Guidance for addressing security threats to artificial intelligence systems* is the **depth standard** for AI Act art. 15(5) cybersecurity. Where ISO 42001 establishes the AIMS at policy level, where ISO 24029 covers robustness/accuracy, and where ISO 27001 covers org-level information security baseline, ISO 27090 owns the **AI-specific threat model and mitigation catalogue**.
+ISO/IEC 27090 (FDIS) *Cybersecurity — Artificial intelligence — Guidance for addressing security threats to artificial intelligence systems* is the **depth standard** for AI Act art. 15(5) cybersecurity. Where ISO 42001 establishes the AIMS at policy level, where ISO 24029 covers robustness/accuracy, and where ISO 27001 covers org-level information security baseline, ISO 27090 owns the **AI-specific threat model and mitigation catalogue**.
 
 This reference is the substantive content. For mapping to AI Act art. 15 and Recital 76, see `05-crosswalk-aiact-iso.md`.
 
 ## 1. Status, scope, and relationship to other standards
 
-**Publication**: ISO/IEC 27090:2025 (released late 2025), International Standard.
+**Status**: ISO/IEC FDIS 27090 — Final Draft International Standard (FDIS ballot closed 2026-06-23); publication as International Standard expected in the course of 2026. Not yet published — cite as FDIS and re-verify at iso.org/standard/56581.html before relying on clause numbers.
 
 **Sponsoring committee**: ISO/IEC JTC 1/SC 27 (information security, cybersecurity, privacy protection), Working Group 4 (security controls and services), with formal liaison to ISO/IEC JTC 1/SC 42 (AI). SC 27 owns the security framing; SC 42 ensures alignment with 42001 + 23894.
 
@@ -330,7 +330,7 @@ INCIDENT RESPONSE:
   - Post-incident review: <reference>
 
 ALIGNMENT TO STANDARDS:
-  - ISO/IEC 27090:2025 — sections <list>
+  - ISO/IEC 27090 (FDIS) — sections <list>
   - ISO/IEC 24029-2:2023 — robustness assessment
   - ISO/IEC TS 4213:2022 — classification performance
   - NIST AI 100-2:2025 — AML taxonomy reference

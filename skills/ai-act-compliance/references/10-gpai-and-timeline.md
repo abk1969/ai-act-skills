@@ -22,6 +22,8 @@ Each interacts with ISO 42001 / 27090 differently and is consequential for proje
 
 **Standard GPAI**: any GPAI model meeting the art. 3(63) definition.
 
+**GPAI qualification — indicative criterion (Commission GPAI guidelines, 2025-07-18):** a model is presumptively a GPAI model when (i) its training compute exceeds **10²³ FLOPs** AND (ii) it can generate language (text or audio), text-to-image or text-to-video. This is an indicative presumption, rebuttable in both directions: a model above the threshold that lacks significant generality is out, a model below it that displays significant generality is in — the qualitative art. 3(63) definition always governs. Do not confuse this qualification threshold with the 10²⁵ FLOPs systemic-risk presumption below.
+
 **GPAI with systemic risk** (art. 51(1)): a GPAI model is classified as having systemic risk if:
 
 (a) It has high-impact capabilities evaluated on the basis of appropriate technical tools and methodologies, including indicators and benchmarks

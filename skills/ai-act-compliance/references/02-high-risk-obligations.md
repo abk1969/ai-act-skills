@@ -165,7 +165,7 @@ For systems that **continue to learn after deployment**: developed in such a way
 **ISO anchors**:
 - ISO/IEC 24029-2:2023 (robustness of neural networks — methodology) and 24029-1
 - ISO/IEC TR 24028:2020 (overview of trustworthiness in AI)
-- ISO/IEC 27090:2025 sections on robustness and adversarial defenses
+- ISO/IEC 27090 (FDIS) sections on robustness and adversarial defenses
 
 #### Cybersecurity (art. 15(5))
 
@@ -178,7 +178,7 @@ System shall be **resilient against attempts by unauthorised third parties** to 
 - Prevent **confidentiality attacks** (model extraction, membership inference, model inversion)
 - Address **model flaws**
 
-**ISO anchor — primary**: **ISO/IEC 27090:2025**. See `04-iso-27090-ai-security.md` for the full threat taxonomy and mitigation catalogue.
+**ISO anchor — primary**: **ISO/IEC 27090 (FDIS)**. See `04-iso-27090-ai-security.md` for the full threat taxonomy and mitigation catalogue.
 
 **ISO anchors — supporting**:
 - ISO/IEC 27001:2022 + 27002:2022 (org-level ISMS baseline — assumed, not duplicated)
