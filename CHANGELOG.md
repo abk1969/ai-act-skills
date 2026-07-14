@@ -38,9 +38,15 @@ Encoded changes:
 - **Machinery carve-out** — AI embedded in Machinery Regulation
   products largely excluded from the dedicated high-risk regime;
   "safety component" definition narrowed (`references/01`).
-- **Art. 4 wording softened** toward supporting staff AI-literacy
-  development; obligation, scope, and 2025-02-02 date unchanged
-  (`references/11`, `SKILL.md`).
+- **Art. 4 wording softened** — providers and deployers "shall take
+  measures to **support the development** of AI literacy" (obligation
+  of means; no guaranteed level), replacing "ensure … a sufficient
+  level"; duty-bearers, scope, and the 2025-02-02 date unchanged.
+  Verbatim adopted-text analysis (`references/11` §1.1, EP doc.
+  P10_TA(2026)0198) contributed by
+  [@luisnunoperdigao-dotcom](https://github.com/luisnunoperdigao-dotcom)
+  in [#5](https://github.com/abk1969/ai-act-skills/pull/5) — thank you.
+  Also reflected in the art. 4 row of `SKILL.md`.
 - **AI Office powers expanded** — exclusive competence over GPAI-based
   systems from the same undertaking; VLOP/VLOSE systems; enhanced
   enforcement (`references/10` context).
@@ -79,6 +85,7 @@ Encoded changes:
   Omnibus change my compliance deadline?".
 - `ROADMAP.md`: v2.1.0 GPAI-CoP milestone delivered by this release;
   harmonised-standards major milestone renumbered to v3.0.0.
+- `CITATION.cff`: version 2.0.0, date-released 2026-07-14.
 
 ## [1.2.0] — 2026-05-08
 

@@ -89,7 +89,7 @@ Invoke when the user mentions or implies any of:
 
 | Obligation | Article | Effective | Scope |
 |---|---|---|---|
-| **AI literacy** | art. 4 | **2025-02-02** | All providers AND deployers — measures to ensure sufficient AI literacy of staff and other persons dealing with the operation/use of AI systems on their behalf. The 2026 AI Omnibus softens the wording toward **supporting** staff AI-literacy development (proportionality), but the obligation itself remains in force |
+| **AI literacy** | art. 4 | **2025-02-02** | All providers AND deployers — measures to ensure sufficient AI literacy of staff and other persons dealing with the operation/use of AI systems on their behalf. _(Digital Omnibus amends this to “shall take measures to support the development of AI literacy” — obligation of means, no guaranteed level; adopted 2026, awaiting OJ — see references/11 §1.1.)_ |
 | **Voluntary codes** | art. 95 | 2026-08-02 | Encouraged for non-high-risk; can extend high-risk obligations voluntarily |
 
 ### Provider vs Deployer (art. 3 definitions)
